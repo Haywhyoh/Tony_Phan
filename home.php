@@ -1,69 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    
-  <title>Samuel Adedayo - FullStack Software Engineer</title>
 
-  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
-  
-  <link rel="stylesheet" type="text/css" href="./assets/css/themify-icons.css">
-  
-  <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.css">
+<?php get_header();?>
 
-  <link rel="stylesheet" type="text/css" href="./assets/vendor/animate/animate.css">
-  
-  <link rel="stylesheet" type="text/css" href="./assets/vendor/owl-carousel/owl.carousel.css">
-  
-  <link rel="stylesheet" type="text/css" href="./assets/vendor/perfect-scrollbar/css/perfect-scrollbar.css">
-  
-  <!-- <link rel="stylesheet" type="text/css" href="./assets/vendor/nice-select/css/nice-select.css"> -->
-  
-  <link rel="stylesheet" type="text/css" href="./assets/vendor/fancybox/css/jquery.fancybox.min.css">
-  
-  <link rel="stylesheet" type="text/css" href="./assets/css/virtual.css">
-  
-  <link rel="stylesheet" type="text/css" href="./assets/css/topbar.virtual.css">
-</head>
-<body class="theme-red">
-    <div class="vg-page page-home" id="home" style="background-image: url(./assets/images/some.jpg); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100vh;">
-        <!-- Navbar -->
-        <div class="navbar navbar-expand-lg navbar-dark sticky" data-offset="500">
-          <div class="container">
-            <a href="" class="navbar-brand">Samuel</a>
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#main-navbar" aria-expanded="true">
-              <span class="ti-menu"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="main-navbar">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                  <a href="#home" class="nav-link" data-animate="scrolling">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#about" class="nav-link" data-animate="scrolling">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#resume" class="nav-link" data-animate="scrolling">Resume</a>
-                  </li>
-                <li class="nav-item">
-                  <a href="#portfolio" class="nav-link" data-animate="scrolling">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#blog" class="nav-link" data-animate="scrolling">Blog</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#contact" class="nav-link" data-animate="scrolling">Contact</a>
-                </li>
-              </ul>
-              <ul class="nav ml-auto">
-                <li class="nav-item">
-                  <button class="btn btn-fab btn-theme no-shadow">En</button>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div> <!-- End Navbar -->
+
         <!-- Caption header -->
         <div class="caption-header text-center intro wow slideInUp">
+        <style>
+    .page-home::before {
+        background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
+        background-image:  url('<?php echo get_template_directory_uri(); ?>/assets/images/some.webp') !important;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+    }
+</style>
           <h5 class="fw-normal">Welcome</h5>
           <h1 class="fs-large mb-4 ">I'm <b class="">Samuel</b> Adedayo</h1>
           <p class="intro-subtitle intro"><span class="text-slider-items">FullStack Software Engineer, Technical Writer, Wordpress Developer</span><strong class="text-slider"></strong></p>
@@ -490,20 +440,6 @@
         </div><!-- end of container -->
     </section><!-- end of contact section -->
 
-    <!-- footer -->
-    <div class="container">
-        <footer class="footer">       
-            <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.codemygig.com">CodeMyGig</a></p>
-            <div class="social-links text-right m-auto ml-sm-auto">
-                <a href="https://github.com/Haywhyoh" class="link"><i class="ti-github"></i></a>
-                <a href="https://twitter.com/cruise_dev" class="link"><i class="ti-twitter-alt"></i></a>
-                <!-- <a href="javascript:void(0)" class="link"><i class="ti-google"></i></a> -->
-                <a href="https://www.linkedin.com/in/ayomide-samuel/" class="link"><i class="ti-linkedin"></i></a>
-                <!-- <a href="javascript:void(0)" class="link"><i class="ti-instagram"></i></a> -->
-                <a href="https://www.writeaboutcoding.com" class="link"><i class="ti-rss"></i></a>
-            </div>
-        </footer>
-    </div> <!-- end of page footer -->
 
       <script  src="./assets/js/jquery-3.5.1.min.js"></script>
     
