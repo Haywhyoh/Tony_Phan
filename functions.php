@@ -1,0 +1,261 @@
+<?php 
+
+function load_styles_and_scripts() {
+    // Register and enqueue styles
+    wp_register_style('bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css', array(), false, 'all');
+    wp_enqueue_style('bootstrap');
+
+    wp_register_style('style_css', get_template_directory_uri() . '/style.css', array(), false, 'all');
+    wp_enqueue_style('style_css');
+
+    wp_register_style('animate_css', get_template_directory_uri() . '/assets/vendor/animate/animate.css', array(), false, 'all');
+    wp_enqueue_style('animate_css');
+
+    wp_register_style('fancy_css', get_template_directory_uri() . '/assets/vendor/fancybox/css/jquery.fancybox.min.css', array(), false, 'all');
+    wp_enqueue_style('fancy_css');
+
+    wp_register_style('nice_css', get_template_directory_uri() . '/assets/vendor/nice-select/css/nice-select.css', array(), false, 'all');
+    wp_enqueue_style('nice_css');
+
+    wp_register_style('themify_css', get_template_directory_uri() . '/assets/vendor/themify-icons/css/themify-icons.css', array(), false, 'all');
+    wp_enqueue_style('themify_css');
+
+    wp_register_style('maicon_css', get_template_directory_uri() . '/assets/css/maicons.css', array(), false, 'all');
+    wp_enqueue_style('maicon_css');
+
+    wp_register_style('minibar_css', get_template_directory_uri() . '/assets/css/minibar.virtual.css', array(), false, 'all');
+    wp_enqueue_style('minibar_css');
+
+    wp_register_style('themify_icon', get_template_directory_uri() . '/assets/css/themify-icons.css', array(), false, 'all');
+    wp_enqueue_style('themify_icon');
+
+    wp_register_style('topbar_css', get_template_directory_uri() . '/assets/css/topbar.virtual.css', array(), false, 'all');
+    wp_enqueue_style('topbar');
+
+    // Register and enqueue scripts
+    wp_enqueue_script('jquery');
+    wp_register_script('typed', get_template_directory_uri() . '/assets/lib/typed/typed.min.js');
+    wp_register_script('bootstrap_js', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js');
+    wp_register_script('minibar_js', get_template_directory_uri() . '/assets/js/minibar-virtual.js', array('jquery' ), false, true);
+    wp_register_script('topbar', get_template_directory_uri() . '/assets/js/topbar-virtual.js', array('jquery'), false, true);
+    
+
+    wp_enqueue_script('typed');
+    wp_enqueue_script('bootstrap_js');
+    wp_enqueue_script('minibar_js');
+    wp_enqueue_script('topbar');
+
+    $vendor_js_files = glob(get_template_directory() . '/assets/vendor/*/js/*.js');
+    foreach ($vendor_js_files as $file) {
+        $handle = basename($file, '.js');
+        $file_uri = get_template_directory_uri() . '/assets/vendor/' . basename(dirname($file)) . '/js/' . basename($file);
+        wp_register_script($handle, $file_uri, array('jquery'), false, true);
+        wp_enqueue_script($handle);
+    }
+
+    wp_register_script('customjs', get_template_directory_uri() . '/assets/js/main.js', array('jquery', 'owlcarousel', 'counter', 'waypoint'), false, true);
+    wp_enqueue_script('customjs');
+}
+
+
+add_action('wp_enqueue_scripts', 'load_styles_and_scripts');
+
+
+//Theme options
+add_theme_support('menus');
+add_theme_support('custom-logo');
+
+//Menus
+register_nav_menus(
+    array(
+        'top-menu' => "Top Bar",
+        'mobile-menu' => 'Mobile Menu Location',
+
+    )
+    );
+
+function add_additional_class_on_li($classes, $item, $args) {
+        if(isset($args->add_li_class)) {
+            $classes[] = $args->add_li_class;
+        }
+        return $classes;
+    }
+add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
+
+function baker_customizer_register($wp_customize){
+// Post Section
+$wp_customize->add_section(
+    'color_settings', array(
+        'title' => __( 'Colors', 'theme-name' ),
+        'description' => esc_html__( 'Change your theme color' ),
+        'priority' => 50,
+        'capability' => 'edit_theme_options',
+    )
+);
+
+// Add Title Text Support
+$wp_customize->add_setting(
+    'primary_color', array(
+        'default' => '#EAA636',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_hex_color'  )
+);
+
+$wp_customize->add_control(
+    new WP_Customize_Color_Control(
+        $wp_customize,
+    'primary_color', array(
+        'description' => __( 'Change Primary color', 'theme-name' ),
+        'label' => __( 'Default Color Control' ),
+        'section'     => 'color_settings',
+        'settings'    => 'primary_color',
+        'type'        => 'color',
+        'capability' => 'edit_theme_options'
+    )
+
+    )
+);
+
+$wp_customize->add_setting(
+    'secondary_color', array(
+        'default' => '#545454',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_hex_color'  )
+);
+
+$wp_customize->add_control(
+    new WP_Customize_Color_Control(
+        $wp_customize,
+    'secondary_color', array(
+        'description' => __( 'Change Secondary color', 'theme-name' ),
+        'section'     => 'color_settings',
+        'settings'    => 'secondary_color',
+        'type'        => 'color',
+        'capability' => 'edit_theme_options'
+    )
+
+    )
+);
+
+$wp_customize->add_setting(
+    'light_color', array(
+        'default' => '#FDF5EB',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_hex_color'  )
+);
+
+$wp_customize->add_control(
+    new WP_Customize_Color_Control(
+        $wp_customize,
+    'light_color', array(
+        'description' => __( 'Change Light color', 'theme-name' ),
+        'section'     => 'color_settings',
+        'settings'    => 'light_color',
+        'type'        => 'color',
+        'capability' => 'edit_theme_options'
+    )
+
+    )
+);
+
+$wp_customize->add_setting(
+    'dark_color', array(
+        'default' => '#1E1916',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_hex_color'  )
+);
+
+$wp_customize->add_control(
+    new WP_Customize_Color_Control(
+        $wp_customize,
+    'dark_color', array(
+        'description' => __( 'Change Dark color', 'theme-name' ),
+        'section'     => 'color_settings',
+        'settings'    => 'dark_color',
+        'type'        => 'color',
+        'capability' => 'edit_theme_options'
+    )
+
+    )
+);
+
+$wp_customize->add_setting(
+    'text_color', array(
+        'default' => '#1E1916',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_hex_color'  )
+);
+
+$wp_customize->add_control(
+    new WP_Customize_Color_Control(
+        $wp_customize,
+    'text_color', array(
+        'description' => __( 'Change Text color', 'theme-name' ),
+        'section'     => 'color_settings',
+        'settings'    => 'text_color',
+        'type'        => 'color',
+        'capability' => 'edit_theme_options'
+    )
+
+    )
+);
+}
+add_action( 'customize_register', 'baker_customizer_register' );
+
+function mytheme_customize_css() {
+    ?>
+    <style type="text/css">
+        .text-primary { color: <?php echo get_theme_mod( 'primary_color', '#545454 !important' ); ?>; }
+        .bg-primary { background-color: <?php echo get_theme_mod( 'primary_color', '#545454 !important' ); ?>; }
+
+        .btn-primary { background-color: <?php echo get_theme_mod( 'primary_color', '#545454 !important' ); ?>; 
+            border-color: <?php echo get_theme_mod( 'primary_color', '#545454 !important' ); ?>;
+         }
+         .bg-light { background-color: <?php echo get_theme_mod( 'light_color', '#FDF5EB !important' ); ?>; }
+
+         .img-twice::before { background: <?php echo get_theme_mod( 'primary_color', '#1E1916 !important' ); ?>;
+                                border: 25px solid <?php echo get_theme_mod( 'light_color', '#FDF5EB !important' ); ?>; }
+         .bg-dark { background-color: <?php echo get_theme_mod( 'dark_color', '#1E1916 !important' ) ;?>; }
+         .nav-link a { color: <?php echo get_theme_mod( 'primary_color', '#545454 !important' ); ?>; }
+         .product-item:hover {background: <?php echo get_theme_mod( 'primary_color', '#545454 ' ) , '!important'; ?>; }
+         .testimonial-carousel .owl-item.center .testimonial-item {background: <?php echo get_theme_mod( 'primary_color', '#545454' ) ,'!important' ;  ?>; }
+         .product-item:hover * {color: <?php echo get_theme_mod( 'light_color', '#545454 !important' ); ?>; }
+         .team-item .team-social:hover {  background: <?php echo get_theme_mod( 'primary_color', '#1E1916' ), '!important'; ?>; }
+         .team-item .team-title {  background: <?php echo get_theme_mod( 'light_color', '#1E1916' ), '!important'; ?>; }
+
+    </style>
+    <?php
+}
+add_action( 'wp_head', 'mytheme_customize_css');
+
+
+/**
+ * 
+ * Create Post types
+ */
+
+// function create_product_post_type(){
+//     add_theme_support('post-thumbnails');
+//     $args = array(
+//         'labels' => array(
+//             'name' => __( 'Products'), 
+//             'singular_name' => __( 'Product'),
+//             'add_new_item' => 'Add New Product',
+//             'edit_item' => 'Edit Product',
+//             'all_items' => 'All Products',
+//          ),
+//         'public' => true,
+//         'has_archive' => true,
+//         'rewrite' => array('slug' => 'products'),
+//         'show_in_rest' => true,
+//         'description' => 'Products availabe for sales in the bakery',
+//         'hierarchical' => true,
+//         'supports' => array('title', 'editor', 'comments', 'thumbnail', 'author', 'excerpt'),
+//         'taxonomies' => array('category')
+
+//     );
+//     register_post_type( 'product_mine', $args);
+// }
+
+
+// add_action( 'init', 'create_product_post_type');
