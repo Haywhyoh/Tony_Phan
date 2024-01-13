@@ -1,4 +1,4 @@
-<div class="vg-page page-home" id="home" style="background-image: url(./assets/images/some.jpg); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100vh;">
+<div class="vg-page page-home" id="home" >
         <!-- Navbar -->
         <div class="navbar navbar-expand-lg navbar-dark sticky" data-offset="500">
           <div class="container">

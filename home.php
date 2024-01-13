@@ -1,18 +1,8 @@
 
 <?php get_header();?>
 
-
         <!-- Caption header -->
         <div class="caption-header text-center intro wow slideInUp">
-        <style>
-    .page-home::before {
-        background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url('<?php echo get_template_directory_uri(); ?>/assets/images/some.webp') !important;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-        height: 100vh;
-    }
-</style>
           <h5 class="fw-normal">Welcome</h5>
           <h1 class="fs-large mb-4 ">I'm <b class="">Samuel</b> Adedayo</h1>
           <p class="intro-subtitle intro"><span class="text-slider-items">FullStack Software Engineer, Technical Writer, Wordpress Developer</span><strong class="text-slider"></strong></p>
@@ -27,7 +17,7 @@
             <!-- about wrapper -->
             <div class="about wow slideInUp">
                 <div class="about-img-holder">
-                    <img src="assets/images/man.png" class="about-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                    <img src="assets/images/man.png" class="about-img" alt="About Image">
                 </div>
                 <div class="about-caption">
                     <p class="section-subtitle">Who Am I ?</p>

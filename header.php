@@ -27,8 +27,13 @@
 
     <!-- Topbar End -->
 <body class="theme-red">
-
+<style>
+    .page-home::before {
+        background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url('<?php echo get_template_directory_uri(); ?>/assets/images/some.webp') !important;
+        background-size: cover !important;
+    }
+</style>
 
 <?php get_template_part('includes/navbar', 'content');?>
 
-    <?php wp_head();?>
+<?php wp_head();?>
