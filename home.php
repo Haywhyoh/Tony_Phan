@@ -55,8 +55,8 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/images/pencil-case.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
-                            <h6 class="title">FullStack Development</h6>
+                            <img src="assets/images/pencil-case.svg" alt="Service 1" class="icon">
+                            <h6 class="title">Campaigns</h6>
                             <p class="subtitle">I can develop custom fullstack web and mobile application tailored to meet your business needs. </p>
                         </div>
                     </div>
@@ -64,8 +64,8 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/images/responsive.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
-                            <h6 class="title">Technical Writing</h6>
+                            <img src="assets/images/responsive.svg" alt="Service 2" class="icon">
+                            <h6 class="title">Social</h6>
                             <p class="subtitle">I create clear and concise technical documentation and articles for all audiences.
                             </p>
                         </div>
@@ -74,8 +74,8 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/images/toolbox.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
-                            <h6 class="title">SEO</h6>
+                            <img src="assets/images/toolbox.svg" alt="Service 3" class="icon">
+                            <h6 class="title">Analytics</h6>
                             <p class="subtitle">I can help you optimize your website for search engine making it easy for you to take top spots in search results.</p>
                         </div>
                     </div>
@@ -83,8 +83,8 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/images/analytics.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
-                            <h6 class="title">Wordpress Development</h6>
+                            <img src="assets/images/analytics.svg" alt="Service 4" class="icon">
+                            <h6 class="title">Production</h6>
                             <p class="subtitle">I offer custom Wordpress Plugin and Theme development and customization. </p>
                         </div>
                     </div>
@@ -100,22 +100,22 @@
             <div class="portfolio">
                 <div class="filters">
                     <a href="#" data-filter=".web" class="active">
-                       Web
+                       Campaigns
                     </a>
                     <a href="#" data-filter=".wordpress">
-                        WordPress
+                        Events
                     </a>
                     <a href="#" data-filter=".freelance">
-                        Freelance
+                        Social
                     </a>
                     <a href="#" data-filter=".backend">
-                        Backend
+                        Production
                     </a>
                 </div>
                 <div class="portfolio-container"> 
                     <div class="col-md-6 col-lg-4 web backend">
                         <div class="portfolio-item" data-toggle="modal" data-target="#myModal">
-                            <img src="assets/images/hillpad.webp" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                            <img src="assets/images/hillpad.webp" class="img-fluid" alt="">
                             <div class="content-holder">
                                 <a class="img-popup" href="assets/images/hillpad.webp"></a>
                                 <div class="text-holder">
@@ -151,7 +151,7 @@
                     </div>
                     <div class="col-md-6 col-lg-4 web wordpress">
                         <div class="portfolio-item" data-toggle="modal" data-target="#myModal2">
-                            <img src="assets/images/abbey.webp" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                            <img src="assets/images/abbey.webp" class="img-fluid" alt="">
                             <div class="content-holder">
                                 <a class="img-popup" href="assets/images/abbey.webp"></a>
                                 <div class="text-holder">
@@ -188,7 +188,7 @@
                     </div>
                     <div class="col-md-6 col-lg-4 web wordpress freelance">
                         <div class="portfolio-item" data-toggle="modal" data-target="#myModal3">
-                            <img src="assets/images/beinitiative.webp" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                         
+                            <img src="assets/images/beinitiative.webp" class="img-fluid" alt="">                         
                             <div class="content-holder">
                                 <a class="img-popup" href="assets/images/beinitiative.webp"></a>
                                 <div class="text-holder">
@@ -225,7 +225,7 @@
                     </div> 
                     <div class="col-md-6 col-lg-4 web freelance ">
                         <div class="portfolio-item" data-toggle="modal" data-target="#myModal4">
-                            <img src="assets/images/dashboard.webp" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                            <img src="assets/images/dashboard.webp" class="img-fluid" alt="">
                             <div class="content-holder">
                                 <a class="img-popup" href="assets/images/dashboard.webp"></a>
                                 <div class="text-holder">
@@ -261,7 +261,7 @@
 
                     <div class="col-md-6 col-lg-4 web "> 
                         <div class="portfolio-item" data-toggle="modal" data-target="#myModal5">
-                            <img src="assets/images/codemygig.webp" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">                               
+                            <img src="assets/images/codemygig.webp" class="img-fluid" alt="">                               
                             <div class="content-holder">
                                 <a class="img-popup" href="assets/images/codemygig.webp"></a>
                                 <div class="text-holder">
@@ -303,14 +303,14 @@
         </div>            
     </section>
     <!-- End of portfolio section -->
-    <section class="section bg-dark py-5">
+    <!-- <section class="section bg-dark py-5">
         <div class="container text-center wow slideInUp">
             <h2 class="text-light mb-5 font-weight-normal">I Am Available For FreeLance</h2>
-            <a href="https://www.upwork.com/freelancers/~01a49b6b5c0e817554" target="_blank"><button class="btn bg-primary w-lg" > 
+            <a href="https://codemygig.com" target="_blank"><button class="btn bg-primary w-lg" > 
                Hire me
             </button></a>
         </div>
-    </section>
+    </section> -->
 
     <section id="resume">
 
@@ -439,33 +439,7 @@
         </div><!-- end of container -->
     </section><!-- end of contact section -->
 
-
-      <script  src="./assets/js/jquery-3.5.1.min.js"></script>
-    
-  <script src="./assets/js/bootstrap.bundle.min.js"></script>
-    
-  <script src="./assets/vendor/owl-carousel/owl.carousel.min.js"></script>
-    
-  <script src="./assets/vendor/perfect-scrollbar/js/perfect-scrollbar.js"></script>
-    
-  <script src="./assets/vendor/isotope/isotope.pkgd.min.js"></script>
-    
-  <script src="./assets/vendor/nice-select/js/jquery.nice-select.min.js"></script>
-    
-  <script src="./assets/vendor/fancybox/js/jquery.fancybox.min.js"></script>
-
-  <script src="./assets/vendor/wow/wow.min.js"></script>
-
-  <script src="./assets/vendor/animateNumber/jquery.animateNumber.min.js"></script>
-
-  <script src="./assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-
-  <script src="./assets/js/google-maps.js"></script>
-    
-  <script src="./assets/js/topbar-virtual.js"></script> 
-   <script src="./assets/js/minibar-virtual.js"></script>
-   <script src="./assets/lib/typed/typed.min.js"></script>
-
+<?php get_footer();?>
 
 
 </body>
