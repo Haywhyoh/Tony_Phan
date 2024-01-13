@@ -29,8 +29,12 @@ function load_styles_and_scripts() {
     wp_register_style('themify_icon', get_template_directory_uri() . '/assets/css/themify-icons.css', array(), false, 'all');
     wp_enqueue_style('themify_icon');
 
-    wp_register_style('topbar_css', get_template_directory_uri() . '/assets/css/topbar.virtual.css', array(), false, 'all');
+    wp_register_style('topbar_css', get_template_directory_uri() . '/assets/css/topbar.css', array(), false, 'all');
     wp_enqueue_style('topbar');
+
+    wp_register_style('virtual_css', get_template_directory_uri() . '/assets/css/topbar.virtual.css', array(), false, 'all');
+    wp_enqueue_style('virtual_css');
+
 
     // Register and enqueue scripts
     wp_enqueue_script('jquery');
