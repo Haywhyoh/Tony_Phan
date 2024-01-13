@@ -4,8 +4,8 @@
         <!-- Caption header -->
         <div class="caption-header text-center intro wow slideInUp">
           <h5 class="fw-normal">Welcome</h5>
-          <h1 class="fs-large mb-4 ">I'm <b class="">Samuel</b> Adedayo</h1>
-          <p class="intro-subtitle intro"><span class="text-slider-items">FullStack Software Engineer, Technical Writer, Wordpress Developer</span><strong class="text-slider"></strong></p>
+          <h1 class="fs-large mb-4 ">I'm <b class="">Tony</b> Phan</h1>
+          <p class="intro-subtitle intro"><span class="text-slider-items">Data Driven, Strategic, Creative, Innovative</span><strong class="text-slider"></strong></p>
         </div> <!-- End Caption header -->
         <div class="floating-button"><span class="ti-mouse"></span></div>
       </div>
@@ -29,7 +29,17 @@
                     <p class="my-2">
                         Beyond my technical skills, I'm a passionate problem-solver, leveraging cutting-edge technologies to address real-world challenges. Recognized for effective communication and collaboration, I thrive in team environments where ideas flourish. I'm currently exploring full-time and freelance opportunities and am eager to bring my expertise to exciting new projects. If you're interested in discussing how we can work together to make technology work for you, please don't hesitate to contact me!
                     </p>
-                    <button class="btn-rounded btn btn-outline-primary mt-4"><a href="https://docs.google.com/document/d/1HaiyWunBQDNTh6M9i4q8sooPh0SKK7KdFudoVd3diT0/edit?usp=sharing">Download CV</a> </button>
+                    <div class="d-flex gap-x-4">
+
+                    
+                    <button class="btn-rounded btn btn-outline-primary mt-4">
+                        <div><a href="">Download CV</a></div>
+                        
+                    </button>
+                    <button class="btn-rounded btn btn-outline-primary mt-4 ml-4">
+                    <div><a href="">Portfolio</a></div>
+                    </button>
+                    </div>
                 </div>              
             </div><!-- end of about wrapper -->
         </div><!-- end of container -->
