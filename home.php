@@ -3,9 +3,12 @@
 
         <!-- Caption header -->
         <div class="caption-header text-center intro wow slideInUp">
-          <h5 class="fw-normal">Welcome</h5>
-          <h1 class="fs-large mb-4 ">I'm <b class="">Tony</b> Phan</h1>
-          <p class="intro-subtitle intro"><span class="text-slider-items">Data Driven, Strategic, Creative, Innovative</span><strong class="text-slider"></strong></p>
+          <h5 class="fw-normal"><?php echo esc_html(get_theme_mod('sub_text')); ?></h5>
+          <h1 class="fs-large mb-4 ">I'm <b class="">
+            <?php echo esc_html(get_theme_mod('big_banner_text')); ?>
+            </b>
+        </h1>
+          <p class="intro-subtitle intro"><span class="text-slider-items"><?php echo esc_html(get_theme_mod('typed_text')); ?></span><strong class="text-slider"></strong></p>
         </div> <!-- End Caption header -->
         <div class="floating-button"><span class="ti-mouse"></span></div>
       </div>
@@ -17,20 +20,15 @@
             <!-- about wrapper -->
             <div class="about wow slideInUp">
                 <div class="about-img-holder">
-                    <img src="assets/images/man.png" class="about-img" alt="About Image">
+                    <img src="<?php echo esc_url(get_theme_mod('about_image')) ?>" class="about-img" alt="About Image">
                 </div>
                 <div class="about-caption">
                     <p class="section-subtitle">Who Am I ?</p>
                     <h2 class="section-title mb-3">About Me</h2>
                     <p>
-                        Hello! I'm a seasoned software engineer and technical writer with a combined experience of 7 years. In that time, I've had the opportunity to collaborate with esteemed companies like, <strong> Ably, FogHorn, and PlanetScale, </strong>contributing to over 300 blogs. I'm proficient in various programming languages, including PHP, Python, and JavaScript. I am a specialist in WordPress, React, and Next projects. My expertise also extends to databases such as SQL and NoSQL, and I'm at ease navigating the complexities of Linux.
-                       
-                    </p>
-                    <p class="my-2">
-                        Beyond my technical skills, I'm a passionate problem-solver, leveraging cutting-edge technologies to address real-world challenges. Recognized for effective communication and collaboration, I thrive in team environments where ideas flourish. I'm currently exploring full-time and freelance opportunities and am eager to bring my expertise to exciting new projects. If you're interested in discussing how we can work together to make technology work for you, please don't hesitate to contact me!
+                        <?php echo nl2br(esc_html(get_theme_mod('about_me'))); ?>
                     </p>
                     <div class="d-flex gap-x-4">
-
                     
                     <button class="btn-rounded btn btn-outline-primary mt-4">
                         <div><a href="">Download CV</a></div>
