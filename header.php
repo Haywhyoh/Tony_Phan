@@ -29,7 +29,7 @@
 <body class="theme-red">
 <style>
     .page-home::before {
-        background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url('<?php echo get_template_directory_uri(); ?>/assets/images/some.webp') !important;
+        background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url('<?php echo esc_url(get_theme_mod('hero_image')); ?>') !important;
         background-size: cover !important;
     }
 </style>
