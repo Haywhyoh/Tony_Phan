@@ -272,6 +272,20 @@ function tony_phan_customizer_section($wp_customize) {
         'section' => 'tony_phan_section',
         'type' => 'text',
     ));
+
+    $wp_customize->add_setting('about_me');
+    $wp_customize->add_control('about_me', array(
+        'label' => 'About Me',
+        'section' => 'tony_phan_section',
+        'type' => 'textarea', // Changed 'text' to 'textarea' to make the textbox longer
+    ));
+
+    $wp_customize->add_setting('about_image');
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'about_image', array(
+        'label' => 'About Image',
+        'section' => 'tony_phan_section',
+        'settings' => 'about_image',
+    )));
 }
 add_action('customize_register', 'tony_phan_customizer_section');
 /**
