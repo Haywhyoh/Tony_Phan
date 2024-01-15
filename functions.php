@@ -49,13 +49,13 @@ function load_styles_and_scripts() {
     wp_enqueue_script('minibar_js');
     wp_enqueue_script('topbar');
 
-    $vendor_js_files = glob(get_template_directory() . '/assets/vendor/*/js/*.js');
-    foreach ($vendor_js_files as $file) {
-        $handle = basename($file, '.js');
-        $file_uri = get_template_directory_uri() . '/assets/vendor/' . basename(dirname($file)) . '/js/' . basename($file);
-        wp_register_script($handle, $file_uri, array('jquery'), false, true);
-        wp_enqueue_script($handle);
-    }
+    // $vendor_js_files = glob(get_template_directory() . '/assets/vendor/*/js/*.js');
+    // foreach ($vendor_js_files as $file) {
+    //     $handle = basename($file, '.js');
+    //     $file_uri = get_template_directory_uri() . '/assets/vendor/' . basename(dirname($file)) . '/js/' . basename($file);
+    //     wp_register_script($handle, $file_uri, array('jquery'), false, true);
+    //     wp_enqueue_script($handle);
+    // }
 
     wp_register_script('customjs', get_template_directory_uri() . '/assets/js/main.js', array('jquery', 'owlcarousel', 'counter', 'waypoint'), false, true);
     wp_enqueue_script('customjs');
@@ -64,6 +64,17 @@ function load_styles_and_scripts() {
 
 add_action('wp_enqueue_scripts', 'load_styles_and_scripts');
 
+
+// add filter atag class
+function add_additional_class_on_a($classes, $item, $args)
+{
+    if (isset($args->add_a_class)) {
+        $classes['class'] = $args->add_a_class;
+    }
+    return $classes;
+}
+
+add_filter('nav_menu_link_attributes', 'add_additional_class_on_a', 1, 3);
 
 //Theme options
 add_theme_support('menus');
