@@ -293,7 +293,7 @@ add_action('customize_register', 'tony_phan_customizer_section');
  * Create Post types
  */
 
-function create_product_post_type(){
+function create_project_post_type(){
     add_theme_support('post-thumbnails');
     $args = array(
         'labels' => array(
@@ -317,4 +317,4 @@ function create_product_post_type(){
 }
 
 
-add_action( 'init', 'create_product_post_type');
+add_action( 'init', 'create_project_post_type');
