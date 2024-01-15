@@ -96,207 +96,59 @@
         <div class="container">
             <h1 class="mb-5"><span class="text-danger">My</span> Portfolio</h1>
             <div class="portfolio">
+               
                 <div class="filters">
-                    <a href="#" data-filter=".web" class="active">
-                       Campaigns
-                    </a>
-                    <a href="#" data-filter=".wordpress">
-                        Events
-                    </a>
-                    <a href="#" data-filter=".freelance">
-                        Social
-                    </a>
-                    <a href="#" data-filter=".backend">
-                        Production
-                    </a>
+                <?php
+                $categories = get_terms(array(
+                    'taxonomy' => 'category',
+                    'hide_empty' => false,
+                ));
+                $firstIteration = true;
+                foreach ($categories as $category) {
+                    $activeClass = $firstIteration ? ' active' : '';
+                    echo '<a href="#" data-filter=".' . $category->slug . '" class="' . $activeClass . '">' . $category->name . '</a>';
+                    $firstIteration = false;
+                }
+                ?>
                 </div>
                 <div class="portfolio-container"> 
-                    <div class="col-md-6 col-lg-4 web backend">
-                        <div class="portfolio-item" data-toggle="modal" data-target="#myModal">
-                            <img src="assets/images/hillpad.webp" class="img-fluid" alt="">
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/images/hillpad.webp"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">HillPad</h6>
-                                    <p class="subtitle">An online directory for all schools</p>
-                                </div>
-                                
-                            </div>   
-                        </div> 
-                        <!-- Modal -->
-                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Project Details</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>The web app makes it easy for students around the world to search for schools and courses in different universities in the world.</p>
-                                        <p>Live Link: <a href="https://dev.hillpad.com/" target="_blank">Hillpad</a></p>
-                                        <p>Github Link: <a href="https://github.com/Haywhyoh/Hillpad" target="_blank">https://github.com/Haywhyoh/Hillpad</a></p>
-                                        <div class="embed-responsive embed-responsive-16by9">
-                                            <iframe class="embed-responsive-item" data-src="https://www.youtube.com/embed/mKql0beenyU?si=lZ9ZvSKVaVvQuBl4" allowfullscreen></iframe>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                                  
-                    </div>
-                    <div class="col-md-6 col-lg-4 web wordpress">
-                        <div class="portfolio-item" data-toggle="modal" data-target="#myModal2">
-                            <img src="assets/images/abbey.webp" class="img-fluid" alt="">
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/images/abbey.webp"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">AbbeyPreciousTouch</h6>
-                                    <p class="subtitle">This is a website for a US-based industrial cleaning company. </p>
-                                </div>
-                            </div> 
-                        </div> 
-                        
-                        <!-- Modal -->
-                        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Project Details</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>This is a website for a US-based industrial cleaning company. Customers are able to request quotes and make enquires about their services. The website was optimized for SEO with contents ranking top pages on Google.</p>
-                                        <p>Live Link: <a href="https://abbeyprecioustouch.com/" target="_blank">AbbeyPreciousTouch</a></p>
-                                        <!-- <p>Github Link: <a href="http://www.github.com/example" target="_blank">www.github.com/example</a></p> -->
-                                        <div class="embed-responsive embed-responsive-16by9">
-                                            <iframe class="embed-responsive-item" data-src="https://www.youtube.com/embed/bDD26sOlWjU?si=VcRYViTTmXve6RUY" allowfullscreen></iframe>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 web wordpress freelance">
-                        <div class="portfolio-item" data-toggle="modal" data-target="#myModal3">
-                            <img src="assets/images/beinitiative.webp" class="img-fluid" alt="">                         
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/images/beinitiative.webp"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">BEInititative</h6>
-                                    <p class="subtitle">An NGO website for environemental Protection in black commuinities</p>
-                                </div>
-                            </div>    
-                        </div>  
-                        
-                        <!-- Modal -->
-                        <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Project Details</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>An Enviromnental NGO Website that receives donations and is integrated with a Leawrning Management System t
-                                            that allows instructors upload free and paid courses.
-                                        </p>
-                                        <p>Live Link: <a href="https://beinitiative.com/" target="_blank">BEInitiative</a></p>
-                                        <!-- <p>Github Link: <a href="http://www.github.com/example" target="_blank">www.github.com/example</a></p> -->
-                                        <div class="embed-responsive embed-responsive-16by9">
-                                            <iframe class="embed-responsive-item" data-src="https://www.youtube.com/embed/igzYWhP1TBA?si=bzrQ8iwRGA9BNDlm" allowfullscreen></iframe>
-                                        </div>
-                                    </div>
-                                
-                                </div>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="col-md-6 col-lg-4 web freelance ">
-                        <div class="portfolio-item" data-toggle="modal" data-target="#myModal4">
-                            <img src="assets/images/dashboard.webp" class="img-fluid" alt="">
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/images/dashboard.webp"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">Admin Dashboard</h6>
-                                    <p class="subtitle">An Admin dashboard with messaging capabilities</p>
-                                </div>
-                            </div>
-                        </div>  
-                        
-                        <!-- Modal -->
-                        <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Project Details</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>This is an admin dashboard for Hillpad that makes it easy for data emtry specialist, supervisors and admin to create, update and delete schools, country and courses.</p>
-                                        <p>Live Link: <a href="https://staff.hillpad.com" target="_blank">https://staff.hillpad.com</a></p>
-                                        <p>Github Link: <a href="https://github.com/Haywhyoh/Hillpad_staff" target="_blank">https://github.com/Haywhyoh/Hillpad_staff</a></p>
-                                        <div class="embed-responsive embed-responsive-16by9">
-                                            <iframe class="embed-responsive-item" data-src="https://www.youtube.com/embed/example" allowfullscreen></iframe>
-                                        </div>
-                                    </div>
-                                   
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 web "> 
-                        <div class="portfolio-item" data-toggle="modal" data-target="#myModal5">
-                            <img src="assets/images/codemygig.webp" class="img-fluid" alt="">                               
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/images/codemygig.webp"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">CodeMyGig</h6>
-                                    <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                                </div>
-                            </div>
-                        </div>  
-                        
-                        <!-- Modal -->
-                        <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Project Details</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>A SaaS website that sells AI marketing tool acess to grow your audience, sales and revenue</p>
-                                        <p>Live Link: <a href="https://code-my-gig-82zt.vercel.app/" target="_blank">www.example.com</a></p>
-                                        <p>Github Link: <a href="http://www.github.com/example" target="_blank">www.github.com/example</a></p>
-                                        <div class="embed-responsive embed-responsive-16by9">
-                                            <iframe class="embed-responsive-item" data-src="https://www.youtube.com/embed/_DwjhH-iMsA?si=YSC-0TxCtL4Ao0UW" allowfullscreen></iframe>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> 
+                    <?php
+                    $args = array(
+                        'post_type' => 'project',
+                        'posts_per_page' => -1, // To retrieve all posts
+                    );
                     
-                      
-                </div> 
+                    $projects_query = new WP_Query($args);
+                    if ($projects_query->have_posts()) {
+                        while ($projects_query->have_posts()) {
+                            $projects_query->the_post();
+                            $categories = get_the_category();
+                            $category_classes = array_map(function($cat) {
+                                return $cat->slug;
+                            }, $categories);
+                            $category_class_string = implode(' ', $category_classes);
+                            ?>
+                            <div class="col-md-6 col-lg-4 <?php echo $category_class_string; ?>">
+                                <div class="portfolio-item" data-toggle="modal" data-target="#myModal">
+                                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="img-fluid" alt="<?php the_title(); ?>">
+                                    <div class="content-holder">
+                                        <a class="img-popup" href="<?php echo get_the_post_thumbnail_url(); ?>"></a>
+                                        <div class="text-holder">
+                                            <h6 class="title"><?php the_title(); ?></h6>
+                                            <p class="subtitle"><?php echo substr(get_the_excerpt(), 0, 150); ?></p>
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
+                            <?php
+                        }
+                        // wp_reset_postdata(); 
+                    }
+                        ?>
+                 
+                
+
+            </div>
             </div>  
         </div>            
     </section>

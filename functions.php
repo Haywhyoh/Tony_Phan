@@ -313,7 +313,7 @@ function create_project_post_type(){
         'taxonomies' => array('category')
 
     );
-    register_post_type( 'product_mine', $args);
+    register_post_type( 'project', $args);
 }
 
 
