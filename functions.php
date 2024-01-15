@@ -42,7 +42,7 @@ function load_styles_and_scripts() {
     wp_register_script('bootstrap_js', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js');
     wp_register_script('minibar_js', get_template_directory_uri() . '/assets/js/minibar-virtual.js', array('jquery' ), false, true);
     wp_register_script('topbar', get_template_directory_uri() . '/assets/js/topbar-virtual.js', array('jquery'), false, true);
-    
+
 
     wp_enqueue_script('typed');
     wp_enqueue_script('bootstrap_js');
@@ -56,7 +56,6 @@ function load_styles_and_scripts() {
     //     wp_register_script($handle, $file_uri, array('jquery'), false, true);
     //     wp_enqueue_script($handle);
     // }
-
     wp_register_script('customjs', get_template_directory_uri() . '/assets/js/main.js', array('jquery', 'owlcarousel', 'counter', 'waypoint'), false, true);
     wp_enqueue_script('customjs');
 }
@@ -73,7 +72,6 @@ function add_additional_class_on_a($classes, $item, $args)
     }
     return $classes;
 }
-
 add_filter('nav_menu_link_attributes', 'add_additional_class_on_a', 1, 3);
 
 //Theme options
@@ -119,16 +117,14 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
     new WP_Customize_Color_Control(
         $wp_customize,
-    'primary_color', array(
+        'primary_color', array(
         'description' => __( 'Change Primary color', 'theme-name' ),
         'label' => __( 'Default Color Control' ),
         'section'     => 'color_settings',
         'settings'    => 'primary_color',
         'type'        => 'color',
         'capability' => 'edit_theme_options'
-    )
-
-    )
+    ))
 );
 
 $wp_customize->add_setting(
@@ -243,7 +239,41 @@ function mytheme_customize_css() {
 }
 add_action( 'wp_head', 'mytheme_customize_css');
 
+function tony_phan_customizer_section($wp_customize) {
+    $wp_customize->add_section('tony_phan_section', array(
+        'title' => 'Tony Phan',
+        'priority' => 30,
+    ));
 
+    $wp_customize->add_setting('hero_image');
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_image', array(
+        'label' => 'Hero Image',
+        'section' => 'tony_phan_section',
+        'settings' => 'hero_image',
+    )));
+
+    $wp_customize->add_setting('big_banner_text');
+    $wp_customize->add_control('big_banner_text', array(
+        'label' => 'Big Banner Text',
+        'section' => 'tony_phan_section',
+        'type' => 'text',
+    ));
+
+    $wp_customize->add_setting('sub_text');
+    $wp_customize->add_control('sub_text', array(
+        'label' => 'Sub Text',
+        'section' => 'tony_phan_section',
+        'type' => 'text',
+    ));
+
+    $wp_customize->add_setting('typed_text');
+    $wp_customize->add_control('typed_text', array(
+        'label' => 'Typed Text',
+        'section' => 'tony_phan_section',
+        'type' => 'text',
+    ));
+}
+add_action('customize_register', 'tony_phan_customizer_section');
 /**
  * 
  * Create Post types
