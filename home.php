@@ -50,16 +50,31 @@
             <h6 class="section-title mb-6">Service</h6>
             <!-- row -->
             <div class="row">
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="body">
-                            <img src="assets/images/pencil-case.svg" alt="Service 1" class="icon">
-                            <h6 class="title">Campaigns</h6>
-                            <p class="subtitle">I can develop custom fullstack web and mobile application tailored to meet your business needs. </p>
+                <?php 
+                    $services_query = new WP_Query(array(
+                        "post_type" => 'service',
+                        "posts_per_page" => -1
+                    ));
+                    if($services_query->have_posts()){
+                        while($services_query->have_posts()) {
+                            $services_query->the_post();
+                ?>
+                    
+                    <div class="col-md-6 col-lg-3">
+                        <div class="service-card">
+                            <div class="body">
+                                <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="Service 1" class="icon">
+                                <h6 class="title"><?php the_title() ?></h6>
+                                <p class="subtitle"><?php the_excerpt() ?></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
+                <?php
+                        }
+                    }
+                ?>
+               
+                <!-- <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="body">
                             <img src="assets/images/responsive.svg" alt="Service 2" class="icon">
@@ -86,7 +101,7 @@
                             <p class="subtitle">I offer custom Wordpress Plugin and Theme development and customization. </p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div><!-- end of row -->
         </div>
     </section><!-- end of service section -->

@@ -310,11 +310,41 @@ function create_project_post_type(){
         'description' => 'Projects that makes up the portfolio',
         'hierarchical' => true,
         'supports' => array('title', 'editor', 'thumbnail', 'author', 'excerpt'),
-        'taxonomies' => array('category')
+        'taxonomies' => array('category'),
+        'menu-icons' => 'dashicons-portfolio'
+
 
     );
     register_post_type( 'project', $args);
 }
 
-
 add_action( 'init', 'create_project_post_type');
+
+
+function create_service_post_type(){
+    add_theme_support('post-thumbnails');
+    $args = array(
+        'labels' => array(
+            'name' => __( 'Services'), 
+            'singular_name' => __( 'Service'),
+            'add_new_item' => 'Add New Service',
+            'add_new' => 'Add a Service',
+            'edit_item' => 'Edit Service',
+            'new_item' => 'Add Service',
+            'all_items' => 'All Service',
+         ),
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => array('slug' => 'service'),
+        'show_in_rest' => true,
+        'description' => 'Services that Tony Phan offers',
+        'hierarchical' => true,
+        'supports' => array('title', 'editor', 'thumbnail', 'author', 'excerpt'),
+        'taxonomies' => array('category'),
+        
+    );
+    register_post_type( 'service', $args);
+}
+
+
+add_action( 'init', 'create_service_post_type');
