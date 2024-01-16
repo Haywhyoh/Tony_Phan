@@ -344,33 +344,33 @@ function create_project_post_type(){
 add_action( 'init', 'create_project_post_type');
 
 
-function create_service_post_type(){
+function create_skills_post_type(){
     add_theme_support('post-thumbnails');
     $args = array(
         'labels' => array(
-            'name' => __( 'Services'), 
-            'singular_name' => __( 'Service'),
-            'add_new_item' => 'Add New Service',
-            'add_new' => 'Add a Service',
-            'edit_item' => 'Edit Service',
-            'new_item' => 'Add Service',
-            'all_items' => 'All Service',
+            'name' => __( 'Skills'), 
+            'singular_name' => __( 'Skills'),
+            'add_new_item' => 'Add New Skills',
+            'add_new' => 'Add a Skills',
+            'edit_item' => 'Edit Skills',
+            'new_item' => 'Add Skills',
+            'all_items' => 'All Skills',
          ),
         'public' => true,
         'has_archive' => true,
-        'rewrite' => array('slug' => 'service'),
+        'rewrite' => array('slug' => 'skills'),
         'show_in_rest' => true,
-        'description' => 'Services that Tony Phan offers',
+        'description' => 'Skills that Tony Phan offers',
         'hierarchical' => true,
-        'supports' => array('title', 'editor', 'thumbnail', 'author', 'excerpt'),
+        'supports' => array('title', 'thumbnail'),
         'taxonomies' => array('category'),
         
     );
-    register_post_type( 'service', $args);
+    register_post_type( 'skills', $args);
 }
 
 
-add_action( 'init', 'create_service_post_type');
+add_action( 'init', 'create_skills_post_type');
 
 function create_testimonial_post_type(){
     add_theme_support('post-thumbnails');
@@ -390,7 +390,7 @@ function create_testimonial_post_type(){
         'show_in_rest' => true,
         'description' => 'Services that Tony Phan offers',
         'hierarchical' => true,
-        'supports' => array('title', 'editor', 'thumbnail'),
+        'supports' => array('title', 'thumbnail'),
         'taxonomies' => array('category'),
         
     );
