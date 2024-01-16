@@ -348,3 +348,31 @@ function create_service_post_type(){
 
 
 add_action( 'init', 'create_service_post_type');
+
+function create_testimonial_post_type(){
+    add_theme_support('post-thumbnails');
+    $args = array(
+        'labels' => array(
+            'name' => __( 'Testimonials'), 
+            'singular_name' => __( 'Tesimonial'),
+            'add_new_item' => 'Add New Testimonial',
+            'add_new' => 'Add a Testimonial',
+            'edit_item' => 'Edit Testimomial',
+            'new_item' => 'Add Testimonial',
+            'all_items' => 'All Testimonial',
+         ),
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => array('slug' => 'testimonial'),
+        'show_in_rest' => true,
+        'description' => 'Services that Tony Phan offers',
+        'hierarchical' => true,
+        'supports' => array('title', 'editor', 'thumbnail'),
+        'taxonomies' => array('category'),
+        
+    );
+    register_post_type( 'testimonial', $args);
+}
+
+
+add_action( 'init', 'create_testimonial_post_type');
