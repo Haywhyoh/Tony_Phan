@@ -256,7 +256,7 @@
                 <div class="col-md-6">
                     <div class="testimonial-card">
                         <div class="testimonial-card-img-holder">
-                            <img src="assets/images/avatar2.jpg" class="testimonial-card-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">                           
+                            <img src="assets/images/avatar2.jpg" class="testimonial-card-img" alt="">                           
                         </div>
                         <div class="testimonial-card-body">
                             <p class="testimonial-card-subtitle">Samuel knows what he is doing. I gave him instructions and assets and he got it right right away. Literately had no change requests because he clearly understood the vision and did it. That is exactly what we all want from designers. Strongly recommend and will hire him again.</p>
@@ -267,7 +267,7 @@
                 <div class="col-md-6">
                     <div class="testimonial-card">
                         <div class="testimonial-card-img-holder">
-                            <img src="assets/images/avatar3.jpg" class="testimonial-card-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">                        
+                            <img src="assets/images/avatar3.jpg" class="testimonial-card-img" alt="">                        
                         </div>
                         <div class="testimonial-card-body">
                             <p class="testimonial-card-subtitle">Samuel is the best web developer I’ve worked with on any platform. His website designs are modern and well optimized for search engine. I can vouch for his works cos I’m a repeat buyer. He is really good, professional and never disappoint. </p>
