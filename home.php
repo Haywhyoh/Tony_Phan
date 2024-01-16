@@ -47,12 +47,12 @@
      <section class="section" id="service">
         <div class="container text-center wow slideInUp">
             <p class="section-subtitle">What I Do ?</p>
-            <h6 class="section-title mb-6">Service</h6>
+            <h6 class="section-title mb-6">Skills</h6>
             <!-- row -->
             <div class="row">
                 <?php 
                     $services_query = new WP_Query(array(
-                        "post_type" => 'service',
+                        "post_type" => 'skills',
                         "posts_per_page" => -1
                     ));
                     if($services_query->have_posts()){
@@ -63,9 +63,9 @@
                     <div class="col-md-6 col-lg-3">
                         <div class="service-card">
                             <div class="body">
-                                <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="Service 1" class="icon">
-                                <h6 class="title"><?php the_title() ?></h6>
-                                <p class="subtitle"><?php the_excerpt() ?></p>
+                                <img src="<?php echo the_field('skill_icon') ?>" alt="<?php echo the_field('skill_name'); ?>" class="icon">
+                                <h6 class="title"><?php the_field('skill_name'); ?></h6>
+                                <p class="subtitle"><?php the_field('skill_detail'); ?></p>
                             </div>
                         </div>
                     </div>
