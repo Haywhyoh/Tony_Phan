@@ -268,6 +268,13 @@ function tony_phan_customizer_section($wp_customize) {
         'settings' => 'hero_image',
     )));
 
+    $wp_customize->add_setting('logo');
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'logo', array(
+        'label' => 'Logo Image',
+        'section' => 'tony_phan_section',
+        'settings' => 'logo',
+    )));
+
     $wp_customize->add_setting('big_banner_text');
     $wp_customize->add_control('big_banner_text', array(
         'label' => 'Big Banner Text',

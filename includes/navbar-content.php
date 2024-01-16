@@ -2,7 +2,10 @@
   <!-- Navbar -->
   <div class="navbar navbar-expand-lg navbar-dark sticky" data-offset="500">
     <div class="container">
-      <a href="" class="navbar-brand">Samuel</a>
+      <a href="" class="navbar-brand">
+      <img src="<?php echo esc_url(get_theme_mod('logo')) ?>" class="" alt="Tony Phan Logo" style="width:30px">
+
+      </a>
       <button class="navbar-toggler" data-toggle="collapse" data-target="#main-navbar" aria-expanded="true">
         <span class="ti-menu"></span>
       </button>
