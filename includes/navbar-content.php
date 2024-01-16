@@ -37,7 +37,7 @@
               </ul>
               <ul class="nav ml-auto">
                 <li class="nav-item">
-                  <button class="btn btn-fab btn-theme no-shadow">En</button>
+                  <button class="btn btn-fab btn-theme no-shadow">Let's Talk</button>
                 </li>
               </ul>
             </div>
