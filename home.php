@@ -185,22 +185,35 @@
           <div class="col-md-6 wow fadeInRight">
             <h2 class="fw-normal">Education</h2>
             <ul class="timeline mt-4 pr-md-5">
+            <?php 
+                    $education_query = new WP_Query(array(
+                        "post_type" => 'education',
+                        "posts_per_page" => -1
+                    ));
+                    if($education_query->have_posts()){
+                        while($education_query->have_posts()) {
+                            $education_query->the_post();
+                ?>
               <li>
-                <div class="title">2022</div>
+                <div class="title"><?php echo the_field('start_date') . ' - ' . the_field('end_date') ?></div>
                 <div class="details">
-                  <h5>Software Engineering</h5>
-                  <small class="fg-theme">Holberton x ALX</small>
-                  <p>An intensive one-year 70-hour per week intensive software engineering programme with backend specialization.</p>
+                  <h5><?php echo the_field('course_of_study') ?></h5>
+                  <small class="fg-theme"><?php echo the_field('school_name') ?></small>
+                  <p><?php echo the_field('course_about') ?></p>
                 </div>
               </li>
-              <li>
+              <?php
+                        }
+                    }
+                ?>
+              <!-- <li>
                 <div class="title">2021</div>
                 <div class="details">
                   <h5>Electronics and Electrical Engineering</h5>
                   <small class="fg-theme">Obafemi Awolowo University</small>
                   <p>A 5-year engineering programme in the best university in Nigeria.</p>
                 </div>
-              </li>
+              </li> -->
               <!-- <li>
                 <div class="title">2008</div>
                 <div class="details">
@@ -214,22 +227,35 @@
           <div class="col-md-6 wow fadeInRight" data-wow-delay="200ms">
             <h2 class="fw-normal">Experience</h2>
             <ul class="timeline mt-4 pr-md-5">
+            <?php 
+                    $experience_query = new WP_Query(array(
+                        "post_type" => 'experience',
+                        "posts_per_page" => -1
+                    ));
+                    if($experience_query->have_posts()){
+                        while($experience_query->have_posts()) {
+                            $experience_query->the_post();
+                ?>
               <li>
-                <div class="title">6/2023 - Current</div>
+                <div class="title"><?php echo the_field('start_date_ex') . ' - ' . the_field('end_date_ex') ?></div>
                 <div class="details">
-                  <h5>Software Engineer</h5>
-                  <small class="fg-theme">Hux Ventures</small>
-                  <p>I worked on various portfolio porjects like HillPad, Nexnoon, Worknoon etc.</p>
+                  <h5><?php the_field('role') ?></h5>
+                  <small class="fg-theme"><?php the_field('company_name') ?></small>
+                  <p><?php the_field('about') ?></p>
                 </div>
               </li>
-              <li>
+              <?php
+                        }
+                    }
+                ?>
+              <!-- <li>
                 <div class="title">3/2021 - 5/2023</div>
                 <div class="details">
                   <h5>Backend Engineer</h5>
                   <small class="fg-theme">CodeMyGig</small>
                   <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered</p>
                 </div>
-              </li>
+              </li> -->
               <!-- <li>
                 <div class="title">2011</div>
                 <div class="details">
