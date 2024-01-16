@@ -194,16 +194,18 @@ counterInit();
 
 
 
-jQuery(window).on("load", function($) {
+jQuery(document).ready(function($) {
   var t = $(".portfolio-container");
-  t.isotope({
+  $(document).ready(function(){
+    t.isotope({
       filter: ".web",
       animationOptions: {
-          duration: 750,
-          easing: "linear",
-          queue: !1
-      }
-  }), $(".filters a").click(function() {
+        duration: 750,
+        easing: "linear",
+        queue: false
+      }})
+    
+    }), $(".filters a").click(function() {
       $(".filters .active").removeClass("active"), $(this).addClass("active");
       var i = $(this).attr("data-filter");
       return t.isotope({
@@ -235,22 +237,22 @@ jQuery(window).on("load", function($) {
       iframe.attr('src', iframe.data('src'));
     }
   });
-  $('#myModal2').on('show.bs.modal', function (event) {
+  jQuery('#myModal2').on('show.bs.modal', function ($, event) {
     var iframe = $(this).find('iframe');
     if (!iframe.attr('src')) {
       iframe.attr('src', iframe.data('src'));
     }
-  });  $('#myModal3').on('show.bs.modal', function (event) {
+  });  jQuery('#myModal3').on('show.bs.modal', function ($, event) {
     var iframe = $(this).find('iframe');
     if (!iframe.attr('src')) {
       iframe.attr('src', iframe.data('src'));
     }
-  });  $('#myModal4').on('show.bs.modal', function (event) {
+  });  jQuery('#myModal4').on('show.bs.modal', function ($, event) {
     var iframe = $(this).find('iframe');
     if (!iframe.attr('src')) {
       iframe.attr('src', iframe.data('src'));
     }
-  });  $('#myModal5').on('show.bs.modal', function (event) {
+  });  jQuery('#myModal5').on('show.bs.modal', function ($, event) {
     var iframe = $(this).find('iframe');
     if (!iframe.attr('src')) {
       iframe.attr('src', iframe.data('src'));

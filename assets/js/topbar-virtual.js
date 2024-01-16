@@ -67,7 +67,7 @@
   $('[data-toggle="selected"]').toggleSelected();
 })(jQuery);
 
-$(document).ready(function () {
+jQuery(document).ready(function ($) {
   
   /* Sticky nvigation */
   
@@ -163,7 +163,7 @@ $(document).ready(function () {
   
 });
 
-$(document).ready(function() {
+jQuery(document).ready(function($) {
   $('#sideel').click(function() {
     $(this).parents('.config').toggleClass('active');
   });
@@ -202,7 +202,7 @@ $(document).ready(function() {
  *
  *  Require(" jquery.animateNumber.min.js ", " jquery.waypoints.min.js ")
  */
-$(document).ready(function() {
+jQuery(document).ready(function($) {
   var counterInit = function() {
     if ( $('.section-counter').length > 0 ) {
       $('.section-counter').waypoint( function( direction ) {
@@ -228,4 +228,4 @@ $(document).ready(function() {
 
   }
   counterInit();
-})(jQuery);
+});
