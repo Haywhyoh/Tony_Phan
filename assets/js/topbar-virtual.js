@@ -1,4 +1,4 @@
-$(function() {
+(function($) {
   var $grid = $('.gridder').isotope({
     itemSelector: '.grid-item',
     percentPosition: true
@@ -65,7 +65,7 @@ $(function() {
   };
   
   $('[data-toggle="selected"]').toggleSelected();
-});
+})(jQuery);
 
 $(document).ready(function () {
   
@@ -228,4 +228,4 @@ $(document).ready(function() {
 
   }
   counterInit();
-});
+})(jQuery);

@@ -1,4 +1,4 @@
-$(document).ready(function() {
+jQuery(document).ready(function($) {
   var mainMenu = $('.main-menu');
   
   mainMenu.each(function() {
@@ -73,7 +73,7 @@ $(document).ready(function() {
   $('[data-toggle="selected"]').toggleSelected();
 });
 
-$(document).ready(function() {
+jQuery(document).ready(function($) {
   // Nice select
   $('.vg-select').niceSelect();
 
@@ -164,7 +164,7 @@ $(document).ready(function() {
  *
  *  Require(" jquery.animateNumber.min.js ", " jquery.waypoints.min.js ")
  */
-$(document).ready(function() {
+jQuery(document).ready(function($) {
   var counterInit = function() {
   if ( $('.section-counter').length > 0 ) {
     $('.section-counter').waypoint( function( direction ) {
@@ -194,7 +194,7 @@ counterInit();
 
 
 
-$(window).on("load", function() {
+jQuery(window).on("load", function($) {
   var t = $(".portfolio-container");
   t.isotope({
       filter: ".web",
@@ -229,7 +229,7 @@ $(window).on("load", function() {
 });
 
 	/*--/ Star Typed /--*/
-  $('#myModal').on('show.bs.modal', function (event) {
+  jQuery('#myModal').on('show.bs.modal', function ($, event) {
     var iframe = $(this).find('iframe');
     if (!iframe.attr('src')) {
       iframe.attr('src', iframe.data('src'));
