@@ -93,6 +93,11 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     font-size: 3.5rem;
   }
 
+  .footer{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   
 @media (max-width: 991.98px) {  
 .about {

@@ -61,7 +61,10 @@
       ?>
         <ul class="nav ml-auto">
                 <li class="nav-item">
-                  <button class="btn btn-fab btn-theme no-shadow">En</button>
+                  <button class="btn btn-fab btn-theme no-shadow"> <a href="" class="link"><i class="ti-facebook"></i></a>
+                  <button class="btn btn-fab btn-theme no-shadow"> <a href="" class="link"><i class="ti-linkedin"></i></a>
+
+               </button>
                 </li>
               </ul>
       </div>
