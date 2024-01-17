@@ -198,7 +198,7 @@ jQuery(document).ready(function($) {
   var t = $(".portfolio-container");
   $(document).ready(function(){
     t.isotope({
-      filter: ".web",
+      filter: ".campaigns",
       animationOptions: {
         duration: 750,
         easing: "linear",

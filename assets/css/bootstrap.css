@@ -58,9 +58,9 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #3A4032;
   text-align: left;
-  background-color: #fff;
+  background-color: #F2E5B7;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -2042,9 +2042,10 @@ pre code {
   font-weight: 400;
   line-height: 1.5;
   color: #495057;
-  background-color: #fff;
+  background-color:  #93B4B1;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid  #3A4032
+  ;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }

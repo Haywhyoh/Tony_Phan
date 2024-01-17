@@ -2,9 +2,9 @@
 <?php get_header();?>
 
         <!-- Caption header -->
-        <div class="caption-header text-center intro wow slideInUp">
+        <div class="caption-header text-center intro wow slideInUp" style="color:#5E837B">
           <h5 class="fw-normal"><?php echo esc_html(get_theme_mod('sub_text')); ?></h5>
-          <h1 class="fs-large mb-4 ">I'm <b class="">
+          <h1 class="fs-large mb-4 " style="font-size: 6rem">I'm <b class="" style="color:#F2E5B7">
             <?php echo esc_html(get_theme_mod('big_banner_text')); ?>
             </b>
         </h1>
@@ -120,9 +120,11 @@
                 ));
                 $firstIteration = true;
                 foreach ($categories as $category) {
+                    if ($category->name !== "Uncategorized"){
                     $activeClass = $firstIteration ? ' active' : '';
                     echo '<a href="#" data-filter=".' . $category->slug . '" class="' . $activeClass . '">' . $category->name . '</a>';
                     $firstIteration = false;
+                    }
                 }
                 ?>
                 </div>
@@ -306,7 +308,7 @@
     </section> <!-- end of testimonial section -->
 
      <!-- contact section -->
-     <section class="section" id="contact wow slideInUp">
+     <section class="section wow slideInUp" id="contact" ">
         <div class="container text-center">
             <p class="section-subtitle">How can you communicate?</p>
             <h6 class="section-title mb-5">Contact Me</h6>
