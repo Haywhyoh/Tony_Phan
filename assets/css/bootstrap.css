@@ -153,13 +153,13 @@ sup {
 }
 
 a {
-  color: #0e0e0e;
+  color:  #3A4032;
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #0056b3;
+  color: #93B4B1;
   text-decoration: underline;
 }
 
@@ -2875,8 +2875,8 @@ fieldset:disabled a.btn {
 
 .btn-outline-primary:hover {
   color: #faf7f7;
-  background-color: #0a0b0b;
-  border-color: #161719;
+  background-color: #5E837B;
+  border-color: #3A4032;
 }
 
 .btn-outline-primary:focus, .btn-outline-primary.focus {

@@ -73,35 +73,7 @@
                         }
                     }
                 ?>
-               
-                <!-- <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="body">
-                            <img src="assets/images/responsive.svg" alt="Service 2" class="icon">
-                            <h6 class="title">Social</h6>
-                            <p class="subtitle">I create clear and concise technical documentation and articles for all audiences.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="body">
-                            <img src="assets/images/toolbox.svg" alt="Service 3" class="icon">
-                            <h6 class="title">Analytics</h6>
-                            <p class="subtitle">I can help you optimize your website for search engine making it easy for you to take top spots in search results.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="body">
-                            <img src="assets/images/analytics.svg" alt="Service 4" class="icon">
-                            <h6 class="title">Production</h6>
-                            <p class="subtitle">I offer custom Wordpress Plugin and Theme development and customization. </p>
-                        </div>
-                    </div>
-                </div> -->
+             
             </div><!-- end of row -->
         </div>
     </section><!-- end of service section -->
@@ -109,7 +81,7 @@
     <!-- Portfolio Section -->
     <section class="section bg-custom-gray" id="portfolio">
         <div class="container">
-            <h1 class="mb-5"><span class="text-danger">My</span> Portfolio</h1>
+            <h1 class="mb-5"><span class="" style="color:#B79270">My</span> Portfolio</h1>
             <div class="portfolio">
                
                 <div class="filters">
@@ -250,22 +222,7 @@
                         }
                     }
                 ?>
-              <!-- <li>
-                <div class="title">3/2021 - 5/2023</div>
-                <div class="details">
-                  <h5>Backend Engineer</h5>
-                  <small class="fg-theme">CodeMyGig</small>
-                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered</p>
-                </div>
-              </li> -->
-              <!-- <li>
-                <div class="title">2011</div>
-                <div class="details">
-                  <h5>Specialize of course</h5>
-                  <small class="fg-theme">University of Study</small>
-                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered</p>
-                </div>
-              </li> -->
+             
             </ul>
           </div>
         </div>
@@ -281,28 +238,30 @@
 
             <!-- row -->
             <div class="row">
+            <?php 
+                    $testimonial_query = new WP_Query(array(
+                        "post_type" => 'testimonial',
+                        "posts_per_page" => -1
+                    ));
+                    if($testimonial_query->have_posts()){
+                        while($testimonial_query->have_posts()) {
+                            $testimonial_query->the_post();
+                ?>
                 <div class="col-md-6">
                     <div class="testimonial-card">
                         <div class="testimonial-card-img-holder">
-                            <img src="assets/images/avatar2.jpg" class="testimonial-card-img" alt="">                           
+                            <img src="<?php echo the_field('testimonial_image') ?>" class="testimonial-card-img" alt="">                           
                         </div>
                         <div class="testimonial-card-body">
-                            <p class="testimonial-card-subtitle">Samuel knows what he is doing. I gave him instructions and assets and he got it right right away. Literately had no change requests because he clearly understood the vision and did it. That is exactly what we all want from designers. Strongly recommend and will hire him again.</p>
-                            <h6 class="testimonial-card-title">Nao Charles</h6>
+                            <p class="testimonial-card-subtitle"><?php echo the_field('testimonial') ?></p>
+                            <h6 class="testimonial-card-title"><?php echo the_field('reviewer') ?></h6>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="testimonial-card">
-                        <div class="testimonial-card-img-holder">
-                            <img src="assets/images/avatar3.jpg" class="testimonial-card-img" alt="">                        
-                        </div>
-                        <div class="testimonial-card-body">
-                            <p class="testimonial-card-subtitle">Samuel is the best web developer I’ve worked with on any platform. His website designs are modern and well optimized for search engine. I can vouch for his works cos I’m a repeat buyer. He is really good, professional and never disappoint. </p>
-                            <h6 class="testimonial-card-title">Emily Reb</h6>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                        }
+                    }
+                ?>
             </div>
         </div> <!-- end of container -->
     </section> <!-- end of testimonial section -->

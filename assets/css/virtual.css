@@ -202,7 +202,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   
 
 .portfolio .filters {
-    border-bottom: 2px solid #dee2e6;
+    border-bottom: 2px solid  #3A4032;
     border-radius: 0;
     padding-bottom: 4px;
     margin: 0 auto 20px;
@@ -245,7 +245,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
   .portfolio .filters a.active {
     opacity: 1;
-    background: #373535;
+    background:   #3A4032;
     color: #fff;
   }
 
@@ -397,7 +397,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 }
 
 a:hover, a:active {
-    color: #2184f5;
+    color:  #3A4032;
 }
 
 /* Image Responsive */
