@@ -153,7 +153,7 @@
 
     <section id="resume">
 
-   
+    <h1 class="mb-5"><span class="" style="color:#B79270">My</span> Resume</h1>
     <div class="container pt-5" >
         <div class="row">
           <div class="col-md-6 wow fadeInRight">
