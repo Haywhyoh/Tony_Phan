@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     
-  <title><?php the_title() ?></title>
 
   <!-- <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
   
