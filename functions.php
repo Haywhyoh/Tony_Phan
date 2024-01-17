@@ -36,9 +36,12 @@ function load_styles() {
     wp_register_style('topbar_css', get_template_directory_uri() . '/assets/css/topbar.css', array('minibar_css'), false, 'all');
     wp_enqueue_style('topbar');
 
+    wp_register_style('virtual_css_main', get_template_directory_uri() . '/assets/css/virtual.css', array(), false, 'all');
+    wp_enqueue_style('virtual_css_main');
+
 }
 
-add_action('wp_enqueue_scripts', 'load_styles', 1);
+add_action('wp_enqueue_scripts', 'load_styles');
 
 function load_scripts() {
 
