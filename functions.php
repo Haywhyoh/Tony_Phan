@@ -125,6 +125,12 @@ function add_additional_class_on_li($classes, $item, $args) {
     }
 add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
 
+function add_title(){
+    add_theme_support( 'title-tag' );
+}
+
+add_action( 'after_setup_theme', 'add_title' );
+
 function baker_customizer_register($wp_customize){
 // Post Section
 $wp_customize->add_section(
