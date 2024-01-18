@@ -6,6 +6,5 @@ if (have_posts()) :
          the_content();
    endwhile;
 endif;
-get_sidebar();
 get_footer(); 
 ?>
