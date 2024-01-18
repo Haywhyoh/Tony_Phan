@@ -232,32 +232,57 @@ jQuery(document).ready(function($) {
 
 	/*--/ Star Typed /--*/
   jQuery(document).ready(function($) {
-    $('#myModal').on('show.bs.modal', function (event) {
+    $('#myModal_1').on('show.bs.modal', function (event) {
       var iframe = $(this).find('iframe');
       if (!iframe.attr('src')) {
         iframe.attr('src', iframe.data('src'));
       }
     });
 
-    $('#myModal2').on('show.bs.modal', function (event) {
+    $('#myModal_2').on('show.bs.modal', function (event) {
       var iframe = $(this).find('iframe');
       if (!iframe.attr('src')) {
         iframe.attr('src', iframe.data('src'));
       }
-    });  $('#myModal3').on('show.bs.modal', function (event) {
+    });  $('#myModal_3').on('show.bs.modal', function (event) {
       var iframe = $(this).find('iframe');
       if (!iframe.attr('src')) {
         iframe.attr('src', iframe.data('src'));
       }
-    });  $('#myModal4').on('show.bs.modal', function (event) {
+    });  $('#myModal_4').on('show.bs.modal', function (event) {
       var iframe = $(this).find('iframe');
       if (!iframe.attr('src')) {
         iframe.attr('src', iframe.data('src'));
       }
-    });  $('#myModal5').on('show.bs.modal', function (event) {
+    });  $('#myModal_5').on('show.bs.modal', function (event) {
       var iframe = $(this).find('iframe');
       if (!iframe.attr('src')) {
         iframe.attr('src', iframe.data('src'));
       }
-    });
+    }); $('#myModal_6').on('show.bs.modal', function (event) {
+      var iframe = $(this).find('iframe');
+      if (!iframe.attr('src')) {
+        iframe.attr('src', iframe.data('src'));
+      }
+    }); $('#myModal_7').on('show.bs.modal', function (event) {
+      var iframe = $(this).find('iframe');
+      if (!iframe.attr('src')) {
+        iframe.attr('src', iframe.data('src'));
+      }
+    }); $('#myModal_8').on('show.bs.modal', function (event) {
+      var iframe = $(this).find('iframe');
+      if (!iframe.attr('src')) {
+        iframe.attr('src', iframe.data('src'));
+      }
+    }); $('#myModal_9').on('show.bs.modal', function (event) {
+      var iframe = $(this).find('iframe');
+      if (!iframe.attr('src')) {
+        iframe.attr('src', iframe.data('src'));
+      }
+    }); $('#myModal_10').on('show.bs.modal', function (event) {
+      var iframe = $(this).find('iframe');
+      if (!iframe.attr('src')) {
+        iframe.attr('src', iframe.data('src'));
+      }
+    }); 
   });
