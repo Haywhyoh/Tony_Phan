@@ -1,5 +1,6 @@
 
 <?php get_header();?>
+<?php get_template_part('includes/navbar', 'content');?>
 
         <!-- Caption header -->
         <div class="caption-header text-center intro wow slideInUp" style="color:#5E837B">
@@ -35,7 +36,7 @@
                         
                     </button>
                     <button class="btn-rounded btn btn-outline-primary mt-4 ml-4">
-                    <div><a href="">Portfolio</a></div>
+                    <div><a href="#portfolio">Portfolio</a></div>
                     </button>
                     </div>
                 </div>              
@@ -153,8 +154,9 @@
 
     <section id="resume">
 
-    <h1 class="mb-5"><span class="" style="color:#B79270">My</span> Resume</h1>
-    <div class="container pt-5" >
+    <div class="container" >
+    <h1 class="section bg-custom-gray"><span class="" style="color:#B79270">My</span> Resume</h1>
+
         <div class="row">
           <div class="col-md-6 wow fadeInRight">
             <h2 class="fw-normal">Education</h2>
