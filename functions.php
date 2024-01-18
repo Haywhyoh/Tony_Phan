@@ -419,3 +419,5 @@ function create_testimonial_post_type(){
 
 
 add_action( 'init', 'create_testimonial_post_type');
+
+add_theme_support('elementor');
