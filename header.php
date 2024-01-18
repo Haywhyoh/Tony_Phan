@@ -35,5 +35,4 @@
 
 
 <?php wp_head();?>
-<?php get_template_part('includes/navbar', 'content');?>
 
