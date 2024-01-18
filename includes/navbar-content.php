@@ -61,8 +61,8 @@
       ?>
         <ul class="nav ml-auto">
                 <li class="nav-item">
-                  <button class="btn btn-fab btn-theme no-shadow"> <a href="" class="link"><i class="ti-facebook"></i></a>
-                  <button class="btn btn-fab btn-theme no-shadow"> <a href="" class="link"><i class="ti-linkedin"></i></a>
+                  <button class="btn btn-fab btn-theme no-shadow"> <a href="https://vimeo.com/showcase/8530841" class="link"><i class="ti-vimeo"></i></a>
+                  <button class="btn btn-fab btn-theme no-shadow"> <a href="https://www.linkedin.com/in/tony-phan-/" class="link"><i class="ti-linkedin"></i></a>
 
                </button>
                 </li>
