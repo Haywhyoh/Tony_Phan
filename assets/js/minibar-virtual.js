@@ -231,30 +231,33 @@ jQuery(document).ready(function($) {
 });
 
 	/*--/ Star Typed /--*/
-  jQuery('#myModal').on('show.bs.modal', function ($, event) {
-    var iframe = $(this).find('iframe');
-    if (!iframe.attr('src')) {
-      iframe.attr('src', iframe.data('src'));
-    }
-  });
-  jQuery('#myModal2').on('show.bs.modal', function ($, event) {
-    var iframe = $(this).find('iframe');
-    if (!iframe.attr('src')) {
-      iframe.attr('src', iframe.data('src'));
-    }
-  });  jQuery('#myModal3').on('show.bs.modal', function ($, event) {
-    var iframe = $(this).find('iframe');
-    if (!iframe.attr('src')) {
-      iframe.attr('src', iframe.data('src'));
-    }
-  });  jQuery('#myModal4').on('show.bs.modal', function ($, event) {
-    var iframe = $(this).find('iframe');
-    if (!iframe.attr('src')) {
-      iframe.attr('src', iframe.data('src'));
-    }
-  });  jQuery('#myModal5').on('show.bs.modal', function ($, event) {
-    var iframe = $(this).find('iframe');
-    if (!iframe.attr('src')) {
-      iframe.attr('src', iframe.data('src'));
-    }
+  jQuery(document).ready(function($) {
+    $('#myModal').on('show.bs.modal', function (event) {
+      var iframe = $(this).find('iframe');
+      if (!iframe.attr('src')) {
+        iframe.attr('src', iframe.data('src'));
+      }
+    });
+
+    $('#myModal2').on('show.bs.modal', function (event) {
+      var iframe = $(this).find('iframe');
+      if (!iframe.attr('src')) {
+        iframe.attr('src', iframe.data('src'));
+      }
+    });  $('#myModal3').on('show.bs.modal', function (event) {
+      var iframe = $(this).find('iframe');
+      if (!iframe.attr('src')) {
+        iframe.attr('src', iframe.data('src'));
+      }
+    });  $('#myModal4').on('show.bs.modal', function (event) {
+      var iframe = $(this).find('iframe');
+      if (!iframe.attr('src')) {
+        iframe.attr('src', iframe.data('src'));
+      }
+    });  $('#myModal5').on('show.bs.modal', function (event) {
+      var iframe = $(this).find('iframe');
+      if (!iframe.attr('src')) {
+        iframe.attr('src', iframe.data('src'));
+      }
+    });
   });

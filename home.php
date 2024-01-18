@@ -129,6 +129,30 @@
                                         </div>
                                     </div>   
                                 </div>
+
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Project Details</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>A SaaS website that sells AI marketing tool acess to grow your audience, sales and revenue</p>
+                                        <p>Live Link: <a href="https://code-my-gig-82zt.vercel.app/" target="_blank">www.example.com</a></p>
+                                        <p>Github Link: <a href="http://www.github.com/example" target="_blank">www.github.com/example</a></p>
+                                        <div class="embed-responsive embed-responsive-16by9">
+                                            <iframe class="embed-responsive-item" data-src="https://www.youtube.com/embed/_DwjhH-iMsA?si=YSC-0TxCtL4Ao0UW" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                             </div>
                             <?php
                         }
