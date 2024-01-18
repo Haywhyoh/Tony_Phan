@@ -74,6 +74,8 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   .about-img-holder .about-img {
     width: 100%;
     margin-bottom: 15px;
+    border-radius: 1rem;
+
   }
   
 
@@ -121,6 +123,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   .about-img-holder .about-img {
     width: 100%;
     margin-bottom: 15px;
+    border-radius: 1rem;
   }
   
   .about-caption {
