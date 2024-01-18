@@ -32,7 +32,7 @@
                     <div class="d-flex gap-x-4">
                     
                     <button class="btn-rounded btn btn-outline-primary mt-4">
-                        <div><a href="">Download CV</a></div>
+                        <div><a href="<?php echo esc_url(get_theme_mod('cv_pdf_file')); ?>" download>Download CV</a></div>
                         
                     </button>
                     <button class="btn-rounded btn btn-outline-primary mt-4 ml-4">

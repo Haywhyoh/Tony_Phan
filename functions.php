@@ -295,6 +295,14 @@ function tony_phan_customizer_section($wp_customize) {
         'settings' => 'logo',
     )));
 
+    $wp_customize->add_setting( 'cv_pdf_file' );
+    $wp_customize->add_control( new WP_Customize_Upload_Control( $wp_customize, 'pdf_file', array(
+        'label' => 'Upload CV',
+        'section' => 'tony_phan_section',
+        'settings' => 'cv_pdf_file',
+        'mime_type' => 'application/pdf','image', // Limit to PDF and image files
+    ) ) );
+
     $wp_customize->add_setting('big_banner_text');
     $wp_customize->add_control('big_banner_text', array(
         'label' => 'Big Banner Text',
