@@ -360,7 +360,7 @@ function create_project_post_type(){
         'show_in_rest' => true,
         'description' => 'Projects that makes up the portfolio',
         'hierarchical' => true,
-        'supports' => array('title', 'editor', 'thumbnail', 'author', 'excerpt'),
+        'supports' => array('title',),
         'taxonomies' => array('category'),
         'menu-icons' => 'dashicons-portfolio'
 
