@@ -109,8 +109,12 @@
                     );
                     
                     $projects_query = new WP_Query($args);
+
                     if ($projects_query->have_posts()) {
+                        $count = 0;
                         while ($projects_query->have_posts()) {
+                            $count = $count + 1;
+                            $unique_id = 'modal_' . $count; // Yo
                             $projects_query->the_post();
                             $categories = get_the_category();
                             $category_classes = array_map(function($cat) {
@@ -119,19 +123,22 @@
                             $category_class_string = implode(' ', $category_classes);
                             ?>
                             <div class="col-md-6 col-lg-4 <?php echo $category_class_string; ?>">
-                                <div class="portfolio-item" data-toggle="modal" data-target="#myModal">
-                                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="img-fluid" alt="<?php the_title(); ?>">
+                            <?php
+                            echo '<div class="portfolio-item" data-toggle="modal" data-target="#' . $unique_id . '">';
+                            ?>
+                                    <img src="<?php echo the_field('project_image'); ?>" class="img-fluid" alt="<?php the_title(); ?>">
                                     <div class="content-holder">
-                                        <a class="img-popup" href="<?php echo get_the_post_thumbnail_url(); ?>"></a>
+                                        <a class="img-popup" href="<?php the_field('skill_name'); ?>"></a>
                                         <div class="text-holder">
-                                            <h6 class="title"><?php the_title(); ?></h6>
-                                            <p class="subtitle"><?php echo substr(get_the_excerpt(), 0, 150); ?></p>
+                                            <h6 class="title"><?php echo the_field('project_name'); ?></h6>
+                                            <p class="subtitle"><?php echo the_field('project_exercpt'); ?></p>
                                         </div>
                                     </div>   
                                 </div>
-
-                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
+                            <?php
+                                echo '<div class="modal fade" id="' . $unique_id . '" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">';
+                           ?>
+                                <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="exampleModalLabel">Project Details</h5>
@@ -140,12 +147,11 @@
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <p>A SaaS website that sells AI marketing tool acess to grow your audience, sales and revenue</p>
-                                        <p>Live Link: <a href="https://code-my-gig-82zt.vercel.app/" target="_blank">www.example.com</a></p>
-                                        <p>Github Link: <a href="http://www.github.com/example" target="_blank">www.github.com/example</a></p>
-                                        <div class="embed-responsive embed-responsive-16by9">
-                                            <iframe class="embed-responsive-item" data-src="https://www.youtube.com/embed/_DwjhH-iMsA?si=YSC-0TxCtL4Ao0UW" allowfullscreen></iframe>
-                                        </div>
+                                    <img src="<?php echo the_field('project_image'); ?>" class="img-fluid mb-2" alt="<?php the_title(); ?>">
+
+                                        <p><?php echo the_field('project_description'); ?></p>
+                                        <p > <a href="<?php echo '/' . the_field('project_slug'); ?>" target="_blank" style="color:red">Click to Learn More</a></p>
+                                      
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
