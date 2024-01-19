@@ -36,7 +36,7 @@
                         
                     </button>
                     <button class="btn-rounded btn btn-outline-primary mt-4 ml-4">
-                    <div><a href="#portfolio">Portfolio</a></div>
+                    <div><a href="<?php echo esc_url(get_theme_mod('portfolio_pdf_file')); ?>">Portfolio</a></div>
                     </button>
                     </div>
                 </div>              
