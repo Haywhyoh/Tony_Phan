@@ -201,7 +201,7 @@
                             $education_query->the_post();
                 ?>
               <li>
-                <div class="title"><?php echo the_field('start_date') . ' - ' . the_field('end_date') ?></div>
+              <div class="title"><?php echo get_field('start_date') . ' - ' . get_field('end_date') ?></div>
                 <div class="details">
                   <h5><?php echo the_field('course_of_study') ?></h5>
                   <small class="fg-theme"><?php echo the_field('school_name') ?></small>
@@ -243,7 +243,7 @@
                             $experience_query->the_post();
                 ?>
               <li>
-                <div class="title"><?php echo the_field('start_date_ex') . ' - ' . the_field('end_date_ex') ?></div>
+                <div class="title"><?php echo get_field('start_date_ex') . ' - ' . get_field('end_date_ex') ?></div>
                 <div class="details">
                   <h5><?php the_field('role') ?></h5>
                   <small class="fg-theme"><?php the_field('company_name') ?></small>
@@ -301,7 +301,7 @@
      <!-- contact section -->
      <section class="section wow slideInUp" id="contact" ">
         <div class="container text-center">
-            <p class="section-subtitle">How can you communicate?</p>
+            <!-- <p class="section-subtitle">How can you communicate?</p> -->
             <h6 class="section-title mb-5">Contact Me</h6>
             <!-- contact form -->
             <form action="" class="contact-form col-md-10 col-lg-8 m-auto">
