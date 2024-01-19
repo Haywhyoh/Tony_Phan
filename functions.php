@@ -297,17 +297,17 @@ function tony_phan_customizer_section($wp_customize) {
 
     $wp_customize->add_setting( 'cv_pdf_file' );
     $wp_customize->add_control( new WP_Customize_Upload_Control( $wp_customize, 'pdf_file', array(
-        'label' => 'Upload CV',
+        'label' => 'Upload CV/Resume',
         'section' => 'tony_phan_section',
         'settings' => 'cv_pdf_file',
         'mime_type' => 'application/pdf','image', // Limit to PDF and image files
     ) ) );
 
     $wp_customize->add_setting( 'portfolio_pdf_file' );
-    $wp_customize->add_control( new WP_Customize_Upload_Control( $wp_customize, 'pdf_file', array(
-        'label' => 'Uplooad Portolio PDF',
+    $wp_customize->add_control( new WP_Customize_Upload_Control( $wp_customize, 'port_pdf_file', array(
+        'label' => 'Upload Portolio PDF',
         'section' => 'tony_phan_section',
-        'settings' => 'porfolio_pdf_file',
+        'settings' => 'portfolio_pdf_file',
         'mime_type' => 'application/pdf, application/msword, image', // Accept PDF, DOCX, and images
     ) ) );
 
