@@ -47,7 +47,7 @@
      <!-- service section -->
      <section class="section" id="service">
         <div class="container text-center wow slideInUp">
-            <p class="section-subtitle">What I Do ?</p>
+            <!-- <p class="section-subtitle">What I Do ?</p> -->
             <h6 class="section-title mb-6">Skills</h6>
             <!-- row -->
             <div class="row">
@@ -189,7 +189,7 @@
 
         <div class="row">
           <div class="col-md-6 wow fadeInRight">
-            <h2 class="fw-normal">Education</h2>
+            <h2 class="fw-normal">Certification</h2>
             <ul class="timeline mt-4 pr-md-5">
             <?php 
                     $education_query = new WP_Query(array(
