@@ -437,3 +437,57 @@ function create_testimonial_post_type(){
 add_action( 'init', 'create_testimonial_post_type');
 
 add_theme_support('elementor');
+
+
+//Send Email
+
+function mytheme_customize_register($wp_customize) {
+    // Add Email Setting
+    $wp_customize->add_setting('contact_form_email', array(
+        'default' => '',
+        'sanitize_callback' => 'sanitize_email',
+    ));
+
+    // Add Email Control
+    $wp_customize->add_control('contact_form_email', array(
+        'label' => 'Contact Form Email',
+        'section' => 'tony_phan_section', // Add it to the Site Identity section or any other section you prefer
+        'type' => 'email',
+    ));
+}
+add_action('customize_register', 'mytheme_customize_register');
+
+
+// Hook function to process form submission
+function process_contact_form() {
+    if (isset($_POST['submit_contact_form'])) {
+        $name = sanitize_text_field($_POST['name']);
+        $email = sanitize_email($_POST['email']);
+        $message = sanitize_textarea_field($_POST['message']);
+        
+        $to = get_theme_mod('contact_form_email', get_option('admin_email')); // Get the email from the Customizer, default to admin email
+        $subject = 'New message from contact form';
+        $headers[] = 'From: ' . $name . ' <' . $email . '>';
+        
+        // Send email using wp_mail()
+        $sent = wp_mail($to, $subject, $message, $headers);
+        
+        if ($sent) {
+            // Email sent successfully
+            // You can add further actions here, such as displaying a success message
+            wp_redirect(home_url());
+            exit;
+        } else {
+            // Email failed to send
+            // You can add further actions here, such as displaying an error message
+            add_action('wp_mail_failed', 'onMailError', 10, 1);
+        }
+        
+       
+    }
+}
+
+function onMailError($wp_error) {
+    echo "Email failed to send: " . $wp_error->get_error_message();
+}
+add_action('init', 'process_contact_form');
