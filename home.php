@@ -271,13 +271,6 @@
     </div>
 </section>
 
-<<<<<<< HEAD
-
-
-<!-- end of testimonial section -->
-
-=======
->>>>>>> fa68126f8c1dbf699abe7555726484a6d159608c
 <!-- contact section -->
 <section class="section wow slideInUp" id="contact" ">
         <div class=" container text-center">
