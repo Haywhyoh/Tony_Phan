@@ -33,12 +33,9 @@
                     <?php echo nl2br(esc_html(get_theme_mod('about_me'))); ?>
                 </p>
                 <div class="d-flex gap-x-4">
-
                     <button class="btn-rounded btn btn-outline-primary mt-4">
                         <div><a href="<?php echo esc_url(get_theme_mod('cv_pdf_file')); ?>" download>Download CV</a></div>
-
                     </button>
-=
                 </div>
             </div>
         </div><!-- end of about wrapper -->
@@ -274,10 +271,13 @@
     </div>
 </section>
 
+<<<<<<< HEAD
 
 
 <!-- end of testimonial section -->
 
+=======
+>>>>>>> fa68126f8c1dbf699abe7555726484a6d159608c
 <!-- contact section -->
 <section class="section wow slideInUp" id="contact" ">
         <div class=" container text-center">
