@@ -5,7 +5,7 @@
 <div class="caption-header text-center intro wow slideInUp" style="color: #006494">
     <h5 class="fw-normal"><?php echo esc_html(get_theme_mod('sub_text')); ?></h5>
     <h1 class="fs-large mb-4 " style="font-size: 8rem"><b class="" style="color: #f2f2f2">
-            <?php echo esc_html(get_theme_mod('big_banner_text')); ?><span style="color: #006494">.</span>
+            <?php echo esc_html(get_theme_mod('big_banner_text')); ?><span style="color: #B02E0C">.</span>
         </b>
     </h1>
     <p class="intro-subtitle intro"><span class="text-slider-items"><?php echo esc_html(get_theme_mod('typed_text')); ?></span><strong class="text-slider"></strong></p>
@@ -83,7 +83,7 @@
 <!-- Portfolio Section -->
 <section class="section bg-custom-gray" id="portfolio">
     <div class="container">
-        <h1 class="mb-5"><span class="" style="color:#B79270">My</span> Portfolio</h1>
+        <h1 class="mb-5"><span class="" style="color:#EB4511">My</span> Portfolio</h1>
         <div class="portfolio">
 
             <div class="filters">
@@ -194,7 +194,7 @@
 <section id="resume">
 
     <div class="container">
-        <h1 class="section bg-custom-gray"><span class="" style="color:#B79270">My</span> Resume</h1>
+        <h1 class="section bg-custom-gray"><span class="" style="color:#EB4511">My</span> Resume</h1>
 
         <div class="row">
             <div class="col-md-6 wow fadeInRight">

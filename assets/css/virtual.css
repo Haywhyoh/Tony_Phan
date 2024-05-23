@@ -155,14 +155,16 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 .service-card {
     position: relative;
     min-height: 230px;
-    border: 1px solid #5E837B;
+    border: 1px solid #051923;
     overflow: hidden;
     border-radius: 3px;
-    background-color: #F2E5B7;
+    background-color: #627C85;
+    color: #E2F0F7 !important;
   }
   
   .service-card .body {
     padding: 10px;
+
   }
   
   .service-card .body img.icon {
@@ -187,6 +189,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     visibility: hidden;
     -webkit-transition: all, 0.3s;
     transition: all, 0.3s;
+    color: #E2F0F7 !important;
   }
   
   @media (prefers-reduced-motion: reduce) {
@@ -1316,7 +1319,7 @@ a:hover, a:active {
 }
 
 .theme-red .fg-theme {
-    color: #5E837B !important;
+    color: #B02E0C!important;
 }
 
 .theme-red .btn-theme {
