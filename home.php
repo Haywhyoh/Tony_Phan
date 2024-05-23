@@ -127,7 +127,11 @@
                             <?php
                             echo '<div class="portfolio-item" data-toggle="modal" data-target="#' . $unique_id . '">';
                             ?>
-                            <img src="<?php echo the_field('project_image'); ?>" class="img-fluid" alt="<?php the_title(); ?>">
+                            <?php if (get_field('youtube')): ?>
+                                <iframe style="width: 100%; height: auto; aspect-ratio: 16 / 9;" src="<?php echo get_field('youtube'); ?>" allowfullscreen></iframe>
+                            <?php else: ?>
+                                <img src="<?php echo get_field('project_image'); ?>" class="img-fluid" alt="<?php the_title(); ?>">
+                            <?php endif; ?>
                             <div class="content-holder">
                                 <a class="img-popup" href="<?php the_field('skill_name'); ?>"></a>
                                 <div class="text-holder">
@@ -148,7 +152,11 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <img src="<?php echo the_field('project_image'); ?>" class="img-fluid mb-2" alt="<?php the_title(); ?>">
+                                <?php if (get_field('youtube')): ?>
+                                    <iframe style="width: 100%; height: auto; aspect-ratio: 16 / 9;" src="<?php echo get_field('youtube'); ?>" allowfullscreen></iframe>
+                            <?php else: ?>
+                                <img src="<?php echo get_field('project_image'); ?>" class="img-fluid" alt="<?php the_title(); ?>">
+                            <?php endif; ?>
 
                                     <p><?php echo the_field('project_description'); ?></p>
                                     <p> <a href="<?php echo '/' . the_field('project_slug'); ?>" target="_blank" style="color:red">Click to Learn More</a></p>
