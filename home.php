@@ -2,10 +2,10 @@
 <?php get_template_part('includes/navbar', 'content'); ?>
 
 <!-- Caption header -->
-<div class="caption-header text-center intro wow slideInUp" style="color: #B02E0C">
+<div class="caption-header text-center intro wow slideInUp" style="color: #E2F0F7">
     <h5 class="fw-normal"><?php echo esc_html(get_theme_mod('sub_text')); ?></h5>
-    <h1 class="fs-large mb-4 " style="font-size: 8rem"><b class="" style="color: #B02E0C">
-            <?php echo esc_html(get_theme_mod('big_banner_text')); ?><span style="color: #B02E0C">.</span>
+    <h1 class="fs-large mb-4 " style="font-size: 8rem"><b class="" style="color: #E2F0F7">
+            <?php echo esc_html(get_theme_mod('big_banner_text')); ?><span style="color: #E2F0F7">.</span>
         </b>
     </h1>
     <p class="intro-subtitle intro"><span class="text-slider-items"><?php echo esc_html(get_theme_mod('typed_text')); ?></span><strong class="text-slider"></strong></p>
