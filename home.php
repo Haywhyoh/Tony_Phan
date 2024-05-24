@@ -277,23 +277,10 @@
     <!-- <p class="section-subtitle">How can you communicate?</p> -->
     <h6 class="section-title mb-5">Contact Me</h6>
     <!-- contact form -->
-    <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post" class="contact-form col-md-10 col-lg-8 m-auto">
-        <div class="form-row">
-            <div class="form-group col-sm-6">
-                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-            </div>
-            <div class="form-group col-sm-6">
-                <input type="email" name="email" class="form-control" placeholder="Enter Email" required>
-            </div>
-            <div class="form-group col-sm-12">
-                <textarea name="message" id="message" rows="6" class="form-control" placeholder="Write Something"></textarea>
-            </div>
-            <div class="form-group col-sm-12 mt-3">
-                <input type="hidden" name="action" value="process_contact_form">
-                <input type="submit" name="submit_contact_form" value="Send Message" class="btn btn-outline-primary rounded">
-            </div>
-        </div>
-    </form><!-- end of contact form -->
+    <div class="contact-form col-md-10 col-lg-8 m-auto">
+        <?php echo do_shortcode('[wpforms id="61" title="false"]'); ?>
+    </div>
+
     </div><!-- end of container -->
 </section><!-- end of contact section -->
 
