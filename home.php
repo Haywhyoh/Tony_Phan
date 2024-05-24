@@ -323,7 +323,7 @@
     <h6 class="section-title mb-5">Contact Me</h6>
     <!-- contact form -->
     <div class="contact-form col-md-10 col-lg-8 m-auto">
-        <?php echo do_shortcode('[wpforms id="61" title="false"]'); ?>
+        <?php echo do_shortcode('[wpforms id="94" title="false"]'); ?>
     </div>
 
     </div><!-- end of container -->
