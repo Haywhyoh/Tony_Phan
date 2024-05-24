@@ -188,6 +188,51 @@
         </div>
     </section> -->
 
+    <section class="container">
+            <h1 class="mb-2"><span class="" style="color:#EB4511">Portfolio </span>Links</h1>
+            <h4 class="animate-x">Check out these exciting links for a glimpse of my work</h4>
+            <div class="row mt-5" >
+               
+
+                <div class="col-md-6 col-lg-3  mb-4">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/advertising-3.jpg'" class="img-fluid" alt="">
+                    <h3>Rundowns</h3>
+                    <p>Join me for a three-hour special newscast and take a behind-the-scenes tour of the beautifully restored Hotel Syracuse. You won't want to miss this historic adventure!</p>
+                    
+                    <a style="color:#EB4511" href="https://uploads.strikinglycdn.com/files/122ca522-9aca-4213-9f0f-8da0fe7a8e9b/hotel%20syr%20special.pdf">Read</a>
+                </div>
+                <div class="col-md-6 col-lg-3 ">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/advertising-3.jpg'" class="img-fluid" alt="">
+
+                    <h3>Amber Alert Maddox
+                    </h3>
+                    <p>When breaking news strikes, I'm ready to take charge. See how my team and I tackled technical issues and provided top-notch coverage of the Amber Alert for Maddox.
+                    </p>
+                    
+                    <a style="color:#EB4511" href="https://uploads.strikinglycdn.com/files/122ca522-9aca-4213-9f0f-8da0fe7a8e9b/hotel%20syr%20special.pdf">Read</a>
+                </div>
+                <div class="col-md-6 col-lg-3 ">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/advertising-3.jpg'" class="img-fluid" alt="">
+
+                    <h3>Live Musical Act</h3>
+                    <p>Wake up to a newscast like no other! Enjoy the sweet sounds of a live band throughout the morning as we deliver the latest news and information to start your day.</p>
+                    
+                    <a style="color:#EB4511" href="https://uploads.strikinglycdn.com/files/122ca522-9aca-4213-9f0f-8da0fe7a8e9b/hotel%20syr%20special.pdf">Read</a>
+                </div>
+                <div class="col-md-6 col-lg-3 ">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/advertising-3.jpg'" class="img-fluid" alt="">
+
+                    <h3>Writing Samples</h3>
+                    <p>Whether it's a breaking news alert or a feature story, I have the skills to write headlines, teases, Vo/Sot, and more. Check out my diverse collection of writing samples, including scripts for showcasing and sportscasts. </p>
+                    
+                    <a style="color:#EB4511" href="https://www.scribd.com/document/333507538/Samples">Read</a>
+                </div>
+                
+            </div>
+
+       
+        </section>
+
 <section id="resume">
 
     <div class="container">
