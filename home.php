@@ -124,9 +124,9 @@
                             <?php
                             echo '<div class="portfolio-item" data-toggle="modal" data-target="#' . $unique_id . '">';
                             ?>
-                            <?php if (get_field('youtube')): ?>
+                            <?php if (get_field('youtube')) : ?>
                                 <iframe style="width: 100%; height: auto; aspect-ratio: 16 / 9;" src="<?php echo get_field('youtube'); ?>" allowfullscreen></iframe>
-                            <?php else: ?>
+                            <?php else : ?>
                                 <img src="<?php echo get_field('project_image'); ?>" class="img-fluid" alt="<?php the_title(); ?>">
                             <?php endif; ?>
                             <div class="content-holder">
@@ -149,11 +149,11 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                <?php if (get_field('youtube')): ?>
-                                    <iframe style="width: 100%; height: auto; aspect-ratio: 16 / 9;" src="<?php echo get_field('youtube'); ?>" allowfullscreen></iframe>
-                            <?php else: ?>
-                                <img src="<?php echo get_field('project_image'); ?>" class="img-fluid" alt="<?php the_title(); ?>">
-                            <?php endif; ?>
+                                    <?php if (get_field('youtube')) : ?>
+                                        <iframe style="width: 100%; height: auto; aspect-ratio: 16 / 9;" src="<?php echo get_field('youtube'); ?>" allowfullscreen></iframe>
+                                    <?php else : ?>
+                                        <img src="<?php echo get_field('project_image'); ?>" class="img-fluid" alt="<?php the_title(); ?>">
+                                    <?php endif; ?>
 
                                     <p><?php echo the_field('project_description'); ?></p>
                                     <p> <a href="<?php echo '/' . the_field('project_slug'); ?>" target="_blank" style="color:red">Click to Learn More</a></p>
@@ -188,50 +188,128 @@
         </div>
     </section> -->
 
-    <section class="container">
-            <h1 class="mb-2"><span class="" style="color:#EB4511">Portfolio </span>Links</h1>
-            <h4 class="animate-x">Check out these exciting links for a glimpse of my work</h4>
-            <div class="row mt-5" >
-               
+<section class="container">
+    <h1 class="mb-2"><span class="" style="color:#EB4511">Portfolio </span>Links</h1>
+    <h4 class="animate-x">Check out these exciting links for a glimpse of my work</h4>
+    <div class="row mt-5">
 
-                <div class="col-md-6 col-lg-3  mb-4">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/advertising-3.jpg'" class="img-fluid" alt="">
-                    <h3>Rundowns</h3>
-                    <p>Join me for a three-hour special newscast and take a behind-the-scenes tour of the beautifully restored Hotel Syracuse. You won't want to miss this historic adventure!</p>
-                    
-                    <a style="color:#EB4511" href="https://uploads.strikinglycdn.com/files/122ca522-9aca-4213-9f0f-8da0fe7a8e9b/hotel%20syr%20special.pdf">Read</a>
-                </div>
-                <div class="col-md-6 col-lg-3 ">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/advertising-3.jpg'" class="img-fluid" alt="">
 
-                    <h3>Amber Alert Maddox
-                    </h3>
-                    <p>When breaking news strikes, I'm ready to take charge. See how my team and I tackled technical issues and provided top-notch coverage of the Amber Alert for Maddox.
-                    </p>
-                    
-                    <a style="color:#EB4511" href="https://uploads.strikinglycdn.com/files/122ca522-9aca-4213-9f0f-8da0fe7a8e9b/hotel%20syr%20special.pdf">Read</a>
-                </div>
-                <div class="col-md-6 col-lg-3 ">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/advertising-3.jpg'" class="img-fluid" alt="">
+        <div class="col-md-6 col-lg-3  mb-4">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/advertising-3.jpg'" class="img-fluid" alt="">
+            <h3>Rundowns</h3>
+            <p>Join me for a three-hour special newscast and take a behind-the-scenes tour of the beautifully restored Hotel Syracuse. You won't want to miss this historic adventure!</p>
 
-                    <h3>Live Musical Act</h3>
-                    <p>Wake up to a newscast like no other! Enjoy the sweet sounds of a live band throughout the morning as we deliver the latest news and information to start your day.</p>
-                    
-                    <a style="color:#EB4511" href="https://uploads.strikinglycdn.com/files/122ca522-9aca-4213-9f0f-8da0fe7a8e9b/hotel%20syr%20special.pdf">Read</a>
-                </div>
-                <div class="col-md-6 col-lg-3 ">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/advertising-3.jpg'" class="img-fluid" alt="">
+            <a style="color:#EB4511" href="https://uploads.strikinglycdn.com/files/122ca522-9aca-4213-9f0f-8da0fe7a8e9b/hotel%20syr%20special.pdf">Read</a>
+        </div>
+        <div class="col-md-6 col-lg-3 ">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/advertising-3.jpg'" class="img-fluid" alt="">
 
-                    <h3>Writing Samples</h3>
-                    <p>Whether it's a breaking news alert or a feature story, I have the skills to write headlines, teases, Vo/Sot, and more. Check out my diverse collection of writing samples, including scripts for showcasing and sportscasts. </p>
-                    
-                    <a style="color:#EB4511" href="https://www.scribd.com/document/333507538/Samples">Read</a>
+            <h3>Amber Alert Maddox
+            </h3>
+            <p>When breaking news strikes, I'm ready to take charge. See how my team and I tackled technical issues and provided top-notch coverage of the Amber Alert for Maddox.
+            </p>
+
+            <a style="color:#EB4511" href="https://uploads.strikinglycdn.com/files/122ca522-9aca-4213-9f0f-8da0fe7a8e9b/hotel%20syr%20special.pdf">Read</a>
+        </div>
+        <div class="col-md-6 col-lg-3 ">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/advertising-3.jpg'" class="img-fluid" alt="">
+
+            <h3>Live Musical Act</h3>
+            <p>Wake up to a newscast like no other! Enjoy the sweet sounds of a live band throughout the morning as we deliver the latest news and information to start your day.</p>
+
+            <a style="color:#EB4511" href="https://uploads.strikinglycdn.com/files/122ca522-9aca-4213-9f0f-8da0fe7a8e9b/hotel%20syr%20special.pdf">Read</a>
+        </div>
+        <div class="col-md-6 col-lg-3 ">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/advertising-3.jpg'" class="img-fluid" alt="">
+
+            <h3>Writing Samples</h3>
+            <p>Whether it's a breaking news alert or a feature story, I have the skills to write headlines, teases, Vo/Sot, and more. Check out my diverse collection of writing samples, including scripts for showcasing and sportscasts. </p>
+
+            <a style="color:#EB4511" href="https://www.scribd.com/document/333507538/Samples">Read</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="container">
+    <h1 class="mb-4"><span class="" style="color:#EB4511">Web </span>Articles</h1>
+
+    <div class="latest-blog-area pt-80 pb-120 gray-bg">
+        <div class="container">
+            <div class="custom-row">
+                <div class="blog-active dot-style">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="blog-wrapper">
+                            <div class="blog-inner">
+                                <span class="tag-blog"><a href="#">CNY Central</a></span>
+                                <h4><a href="#">Fighting fires can be dangerous, as one brave firefighter found out firsthand.</a></h4>
+                                <p>Read about their heroic efforts and the minor injury they suffered in this gripping article.</p>
+                                <div class="blog-meta">
+                                    <span class="f-left">
+                                        Jan 29, 2016
+                                    </span>
+                                    <span class="f-right blog-more-btn">
+                                        <a href="https://cnycentral.com/news/local/one-firefighter-suffers-minor-injury-while-fighting-late-night-fire"><i class="fas fa-long-arrow-alt-right"></i> <span class="blog-more"> Read Article</span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="blog-wrapper">
+                            <div class="blog-inner">
+                                <span class="tag-blog"><a href="#">CNY Central</a></span>
+                                <h4><a href="#">Driving under the influence is a serious offense, and state police are cracking down on those who do.</a></h4>
+                                <p>Find out more about their efforts to keep our roads safe in this informative article.</p>
+                                <div class="blog-meta">
+                                    <span class="f-left">
+                                        Jul 1, 2016
+                                    </span>
+                                    <span class="f-right blog-more-btn">
+                                        <a href="http://cnycentral.com/news/local/state-police-cracking-down-on-impaired-driving-this-weekend"><i class="fas fa-long-arrow-alt-right"></i> <span class="blog-more"> Read Article</span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="blog-wrapper">
+                            <div class="blog-inner">
+                                <span class="tag-blog"><a href="#">Vavel</a></span>
+                                <h4><a href="#">Get ready for the ultimate showdown!</a></h4>
+                                <p>In this exciting preview, I break down the USA vs Germany World Cup match and give you an inside look at what to expect from these two powerhouse teams.</p>
+                                <div class="blog-meta">
+                                    <span class="f-left">
+                                        Jun 25, 2014
+                                    </span>
+                                    <span class="f-right blog-more-btn">
+                                        <a href="https://www.vavel.com/en-us/soccer/363555-world-cup-preview-usa-vs-germany.html"><i class="fas fa-long-arrow-alt-right"></i> <span class="blog-more"> Read Article</span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="blog-wrapper">
+                            <div class="blog-inner">
+                                <span class="tag-blog"><a href="#">Vavel</a></span>
+                                <h4><a href="#">Major League Soccer just signed a new TV deal, and soccer fans everywhere are buzzing with excitement.</a></h4>
+                                <p>Read more about this groundbreaking agreement and what it means for the future of the sport in this in-depth article.</p>
+                                <div class="blog-meta">
+                                    <span class="f-left">
+                                        May 12, 2014
+                                    </span>
+                                    <span class="f-right blog-more-btn">
+                                        <a href="https://www.vavel.com/en-us/soccer/350027-mls-announces-new-tv-deal.html"><i class="fas fa-long-arrow-alt-right"></i> <span class="blog-more"> Read Article</span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
             </div>
-
-       
-        </section>
+        </div>
+</section>
 
 <section id="resume">
 
