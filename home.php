@@ -46,7 +46,7 @@
 <section class="section" id="service">
     <div class="container text-center wow slideInUp">
         <!-- <p class="section-subtitle">What I Do ?</p> -->
-        <h6 class="section-title mb-6">Skills</h6>
+        <h6 class="section-title mb-6">Core Skills</h6>
         <!-- row -->
         <div class="row">
             <?php
@@ -59,7 +59,7 @@
                     $services_query->the_post();
             ?>
 
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-md-6 col-lg-3 pb-3">
                         <div class="service-card">
                             <div class="body">
                                 <img src="<?php echo the_field('skill_icon') ?>" alt="<?php echo the_field('skill_name'); ?>" class="icon">
