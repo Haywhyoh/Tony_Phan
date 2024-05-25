@@ -263,6 +263,10 @@ textarea {
   padding: 0;
 }
 
+.btn {
+  color: #006494;
+}
+
 .btn, .btn:hover {
   border-width: 2px;
   border-color: #006494;
