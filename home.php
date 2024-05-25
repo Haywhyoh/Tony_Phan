@@ -259,35 +259,9 @@
 <section class="section my-4" id="resume">
     <div class="container wow slideInUp">
         <h2 class="section-title text-center mb-5">My <span>Resume</span></h2>
-        <div class="row">
+        <div class="row resume">
             <div class="col-md-6 wow fadeInRight">
-                <h2 class="fw-normal">Certification</h2>
-                <ul class="timeline mt-4 pr-md-5">
-                    <?php
-                    $education_query = new WP_Query(array(
-                        "post_type" => 'education',
-                        "posts_per_page" => -1
-                    ));
-                    if ($education_query->have_posts()) {
-                        while ($education_query->have_posts()) {
-                            $education_query->the_post();
-                    ?>
-                            <li>
-                                <div class="title"><?php echo get_field('start_date') . ' - ' . get_field('end_date') ?></div>
-                                <div class="details">
-                                    <h5><?php echo the_field('course_of_study') ?></h5>
-                                    <small class="fg-theme"><?php echo the_field('school_name') ?></small>
-                                    <p><?php echo the_field('course_about') ?></p>
-                                </div>
-                            </li>
-                    <?php
-                        }
-                    }
-                    ?>
-                </ul>
-            </div>
-            <div class="col-md-6 wow fadeInRight" data-wow-delay="200ms">
-                <h2 class="fw-normal">Experience</h2>
+                <h2>Experience</h2>
                 <ul class="timeline mt-4 pr-md-5">
                     <?php
                     $experience_query = new WP_Query(array(
@@ -316,6 +290,41 @@
 
                 </ul>
             </div>
+            <div class="col-md-6 wow fadeInRight"  data-wow-delay="200ms">
+                <h2>Certification</h2>
+                <ul class="timeline mt-4 pr-md-5">
+                    <?php
+                    $education_query = new WP_Query(array(
+                        "post_type" => 'education',
+                        "posts_per_page" => -1
+                    ));
+                    if ($education_query->have_posts()) {
+                        while ($education_query->have_posts()) {
+                            $education_query->the_post();
+                    ?>
+                            <li>
+                                <div class="title">
+                                    <?php
+                                        if (get_field('start_date')) {
+                                            echo get_field('start_date') . ' - ';
+                                        }
+                                        if (get_field('end_date')) {
+                                            echo get_field('end_date');
+                                        }
+                                    ?>
+                                </div>
+                                <div class="details">
+                                    <h5><?php echo the_field('course_of_study') ?></h5>
+                                    <small class="fg-theme"><?php echo the_field('school_name') ?></small>
+                                    <p><?php echo the_field('course_about') ?></p>
+                                </div>
+                            </li>
+                    <?php
+                        }
+                    }
+                    ?>
+                </ul>
+            </div>         
         </div>
 
     </div>

@@ -358,3 +358,37 @@ textarea {
   color: #051923;
   font-weight: 200;
 }
+
+.resume h2 {
+  color: #006494;
+  font-size: 28px;
+}
+
+.timeline::before {
+  background-color: #006494;
+}
+
+.timeline li::before {
+  background-color: #051923;
+  border: 3px solid #006494;
+}
+
+.timeline li .title {
+  width: fit-content;
+  background-color: transparent;
+  border: 1px solid #006494;
+  color: #006494;
+}
+
+.timeline li .details {
+  background-color: transparent;
+}
+
+.timeline li .details h5 {
+  color: #051923;
+}
+
+.timeline li .details p {
+  font-weight: 200;
+  color: #051923;
+}
