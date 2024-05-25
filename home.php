@@ -196,42 +196,58 @@
         <h2 class="section-title text-center">Portfolio <span>Links</span></h2>
         <p class="section-subtitle text-center mb-5">Check out these exciting links for a glimpse of my work</p>
         <div class="row mt-5">
-
-
-            <div class="col-md-6 col-lg-3  mb-4">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/advertising-3.jpg'" class="img-fluid" alt="">
-                <h3>Rundowns</h3>
-                <p>Join me for a three-hour special newscast and take a behind-the-scenes tour of the beautifully restored Hotel Syracuse. You won't want to miss this historic adventure!</p>
-
-                <a style="color:#EB4511" href="https://uploads.strikinglycdn.com/files/122ca522-9aca-4213-9f0f-8da0fe7a8e9b/hotel%20syr%20special.pdf">Read</a>
+            <div class="col-md-6 col-lg-6 mb-4">
+                <div class="blog-wrapper">
+                    <div class="blog-inner">
+                        <h4><a href="https://uploads.strikinglycdn.com/files/122ca522-9aca-4213-9f0f-8da0fe7a8e9b/hotel%20syr%20special.pdf">Rundowns</a></h4>
+                        <p>Join me for a three-hour special newscast and take a behind-the-scenes tour of the beautifully restored Hotel Syracuse. You won't want to miss this historic adventure!</p>
+                        <div class="blog-meta">
+                            <span class="f-left">
+                                <a href="https://uploads.strikinglycdn.com/files/122ca522-9aca-4213-9f0f-8da0fe7a8e9b/hotel%20syr%20special.pdf">Read</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6 col-lg-3 ">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/advertising-3.jpg'" class="img-fluid" alt="">
-
-                <h3>Amber Alert Maddox
-                </h3>
-                <p>When breaking news strikes, I'm ready to take charge. See how my team and I tackled technical issues and provided top-notch coverage of the Amber Alert for Maddox.
-                </p>
-
-                <a style="color:#EB4511" href="https://uploads.strikinglycdn.com/files/122ca522-9aca-4213-9f0f-8da0fe7a8e9b/hotel%20syr%20special.pdf">Read</a>
+            <div class="col-md-6 col-lg-6 mb-4">
+                <div class="blog-wrapper">
+                    <div class="blog-inner">
+                        <h4><a href="https://uploads.strikinglycdn.com/files/122ca522-9aca-4213-9f0f-8da0fe7a8e9b/hotel%20syr%20special.pdf">Amber Alert Maddox</a></h4>
+                        <p>When breaking news strikes, I'm ready to take charge. See how my team and I tackled technical issues and provided top-notch coverage of the Amber Alert for Maddox.</p>
+                        <div class="blog-meta">
+                            <span class="f-left">
+                                <a href="https://uploads.strikinglycdn.com/files/122ca522-9aca-4213-9f0f-8da0fe7a8e9b/hotel%20syr%20special.pdf">Read</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6 col-lg-3 ">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/advertising-3.jpg'" class="img-fluid" alt="">
-
-                <h3>Live Musical Act</h3>
-                <p>Wake up to a newscast like no other! Enjoy the sweet sounds of a live band throughout the morning as we deliver the latest news and information to start your day.</p>
-
-                <a style="color:#EB4511" href="https://uploads.strikinglycdn.com/files/122ca522-9aca-4213-9f0f-8da0fe7a8e9b/hotel%20syr%20special.pdf">Read</a>
+            <div class="col-md-6 col-lg-6 mb-4">
+                <div class="blog-wrapper">
+                    <div class="blog-inner">
+                        <h4><a href="https://uploads.strikinglycdn.com/files/122ca522-9aca-4213-9f0f-8da0fe7a8e9b/hotel%20syr%20special.pdf">Live Musical Act</a></h4>
+                        <p>Wake up to a newscast like no other! Enjoy the sweet sounds of a live band throughout the morning as we deliver the latest news and information to start your day.</p>
+                        <div class="blog-meta">
+                            <span class="f-left">
+                                <a href="https://uploads.strikinglycdn.com/files/122ca522-9aca-4213-9f0f-8da0fe7a8e9b/hotel%20syr%20special.pdf">Read</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6 col-lg-3 ">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/advertising-3.jpg'" class="img-fluid" alt="">
-
-                <h3>Writing Samples</h3>
-                <p>Whether it's a breaking news alert or a feature story, I have the skills to write headlines, teases, Vo/Sot, and more. Check out my diverse collection of writing samples, including scripts for showcasing and sportscasts. </p>
-
-                <a style="color:#EB4511" href="https://www.scribd.com/document/333507538/Samples">Read</a>
+            <div class="col-md-6 col-lg-6 mb-4">
+                <div class="blog-wrapper">
+                    <div class="blog-inner">
+                        <h4><a href="https://www.scribd.com/document/333507538/Samples">Writing Samples</a></h4>
+                        <p>Whether it's a breaking news alert or a feature story, I have the skills to write headlines, teases, Vo/Sot, and more. Check out my diverse collection of writing samples, including scripts for showcasing and sportscasts.</p>
+                        <div class="blog-meta">
+                            <span class="f-left">
+                                <a href="https://www.scribd.com/document/333507538/Samples">Read</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
     </div>
 </section>
@@ -314,7 +330,7 @@
                     </div>
                 </div>
             </div>
-    </div>
+        </div>
 </section>
 
 
@@ -385,12 +401,12 @@
 
 <!-- contact section -->
 <section class="section section-alt py-5" id="contact" ">
-    <div class="container text-center wow slideInUp">
-        <h2 class="section-title mb-5">Contact <span>Me</span></h2>
-        <!-- contact form -->
-        <div class="contact-form col-md-10 col-lg-8 m-auto">
-            <?php echo do_shortcode('[wpforms id="94" title="false"]'); ?>
-        </div>
+    <div class=" container text-center wow slideInUp">
+    <h2 class="section-title mb-5">Contact <span>Me</span></h2>
+    <!-- contact form -->
+    <div class="contact-form col-md-10 col-lg-8 m-auto">
+        <?php echo do_shortcode('[wpforms id="94" title="false"]'); ?>
+    </div>
     </div>
 </section>
 <!-- end of contact section -->

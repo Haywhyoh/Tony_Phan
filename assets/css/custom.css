@@ -129,7 +129,7 @@ textarea {
 }
 
 .blog-wrapper {
-  padding: 30px;
+  padding: 20px 30px;
   overflow: hidden;
   border: 1px solid #e0e0e0;
   transition: 0.3s;
@@ -154,20 +154,29 @@ textarea {
   font-size: 16px;
   font-weight: 600;
   color: #333;
-  line-height: 30px;
+  line-height: 1.5;
   margin-bottom: 20px;
-  margin-top: 15px;
+}
+
+.blog-inner h4 a {
+  color: #006494;
+  text-decoration: none;
+}
+
+.blog-inner h4 a:hover {
+  color: #003554;
 }
 
 .blog-inner p {
-  line-height: 30px;
+  line-height: 1.5;
   font-size: 14px;
   margin-bottom: 30px;
+  font-weight: 200;
 }
 
 .blog-meta {
   border-top: 1px solid #e0e0e0;
-  padding-top: 25px;
+  padding-top: 10px;
 }
 
 .blog-meta span {
@@ -176,8 +185,14 @@ textarea {
 }
 
 .blog-meta span a {
-  color: #333;
-  font-size: 11px;
+  color: #006494;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.blog-meta span a:hover {
+  color: #003554;
 }
 
 .blog-more {
@@ -195,6 +210,23 @@ textarea {
 
 .blog-wrapper:hover .blog-more-btn {
   transform: translateX(0px);
+}
+
+.blog-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.blog-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.blog-inner p {
+  margin-bottom: 10px; /* Adjust the space between p element and blog-meta div */
 }
 
 .custom-row {
