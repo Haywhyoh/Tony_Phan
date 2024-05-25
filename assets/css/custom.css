@@ -1,6 +1,7 @@
 body {
   /* background-color: #e2f0f7b8; */
   background-color: #efefef;
+  font-family: 'Poppins', sans-serif;
 }
 
 .page-home .navbar.floating {
@@ -260,4 +261,27 @@ textarea {
 
 .btn-link:hover {
   text-decoration: none;
+}
+
+.text-slider {
+  font-weight: 400;
+}
+
+.section-title {
+  color: #051923;
+}
+
+.section-title span {
+  color: #006494
+}
+
+.section-subtitle {
+  color: #003554;
+  font-weight: 700;
+}
+
+
+
+.about-text {
+  font-weight: 200;
 }
