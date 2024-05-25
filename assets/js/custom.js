@@ -1,10 +1,12 @@
 jQuery(".blog-active").slick({
     dots: true,
-    arrows: false,
-    infinite: false,
+    arrows: true,
+    infinite: true,
     speed: 300,
-    slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    autoplay: true,
+    autoplaySpeed: 4000,
     responsive: [
       {
         breakpoint: 1024,
@@ -19,7 +21,7 @@ jQuery(".blog-active").slick({
         breakpoint: 991,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1
+          slidesToScroll: 2
         }
       },
       {

@@ -335,7 +335,7 @@
 
 
 <section class="section my-4" id="resume">
-    <div class="container wow slideUpIn">
+    <div class="container wow slideInUp">
         <h2 class="section-title text-center mb-5">My <span>Resume</span></h2>
         <div class="row">
             <div class="col-md-6 wow fadeInRight">
