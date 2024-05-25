@@ -33,9 +33,11 @@
                     <?php echo nl2br(esc_html(get_theme_mod('about_me'))); ?>
                 </p>
                 <div class="d-flex gap-x-4">
-                    <button class="btn-rounded btn btn-outline-primary mt-4">
-                        <div><a href="<?php echo esc_url(get_theme_mod('cv_pdf_file')); ?>" download>Download CV</a></div>
-                    </button>
+                    <a class="btn-link" href="<?php echo esc_url(get_theme_mod('cv_pdf_file')); ?>" download>
+                        <button class="btn-rounded btn btn-outline-primary mt-4">
+                            Download CV
+                        </button>
+                    </a>
                 </div>
             </div>
         </div><!-- end of about wrapper -->

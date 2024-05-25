@@ -1,5 +1,6 @@
 body {
-  background-color: #e2f0f7b8;
+  /* background-color: #e2f0f7b8; */
+  background-color: #efefef;
 }
 
 .page-home .navbar.floating {
@@ -245,4 +246,18 @@ textarea {
   border: 2px solid #adadb0;
   text-indent: -10000px;
   padding: 0;
+}
+
+.btn, .btn:hover {
+  border-width: 2px;
+  border-color: #006494;
+}
+
+.btn:hover {
+  background-color: #006494;
+  color: #efefef;
+}
+
+.btn-link:hover {
+  text-decoration: none;
 }
