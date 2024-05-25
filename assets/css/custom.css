@@ -341,3 +341,20 @@ textarea {
 .portfolio-videos-carousel.dot-style .slick-dots {
   bottom: -30px;
 }
+
+.grayscale-image {
+  filter: grayscale(100%)  sepia(100%) hue-rotate(180deg) brightness(0.8);
+}
+
+.service-card {
+  background-color: transparent;
+}
+
+.service-card .body .title {
+  color: #006494;
+}
+
+.service-card .body .subtitle {
+  color: #051923;
+  font-weight: 200;
+}

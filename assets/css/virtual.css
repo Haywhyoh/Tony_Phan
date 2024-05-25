@@ -192,7 +192,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     visibility: hidden;
     -webkit-transition: all, 0.3s;
     transition: all, 0.3s;
-    color: #E2F0F7 !important;
+    color: #E2F0F7;
   }
   
   @media (prefers-reduced-motion: reduce) {

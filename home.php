@@ -48,7 +48,6 @@
 <!-- Service section -->
 <section class="section my-4" id="service">
     <div class="container text-center wow slideInUp">
-        <!-- <p class="section-subtitle">What I Do ?</p> -->
         <h2 class="section-title mb-5">Core <span>Skills</span></h2>
         <!-- row -->
         <div class="row">
@@ -61,16 +60,15 @@
                 while ($services_query->have_posts()) {
                     $services_query->the_post();
             ?>
-
-                    <div class="col-md-6 col-lg-3 pb-3">
-                        <div class="service-card">
-                            <div class="body">
-                                <img src="<?php echo the_field('skill_icon') ?>" alt="<?php echo the_field('skill_name'); ?>" class="icon">
-                                <h6 class="title"><?php the_field('skill_name'); ?></h6>
-                                <p class="subtitle"><?php the_field('skill_detail'); ?></p>
-                            </div>
+                <div class="col-md-6 col-lg-3 pb-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="<?php echo the_field('skill_icon') ?>" alt="<?php echo the_field('skill_name'); ?>" class="icon grayscale-image">
+                            <h6 class="title"><?php the_field('skill_name'); ?></h6>
+                            <p class="subtitle"><?php the_field('skill_detail'); ?></p>
                         </div>
                     </div>
+                </div>
             <?php
                 }
             }
