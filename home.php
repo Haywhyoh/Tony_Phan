@@ -80,116 +80,40 @@
     </div>
 </section><!-- end of service section -->
 
-<!-- Portfolio Section -->
 <section class="section section-alt py-5" id="portfolio">
     <div class="container wow slideInUp">
-        <h2 class="section-title text-center mb-5">My <span>Portfolio</span></h2>
-        <div class="portfolio">
-
-            <div class="filters">
-                <?php
-                $categories = get_terms(array(
-                    'taxonomy' => 'category',
-                    'hide_empty' => false,
-                ));
-                $firstIteration = true;
-                foreach ($categories as $category) {
-                    if ($category->name !== "Uncategorized") {
-                        $activeClass = $firstIteration ? ' active' : '';
-                        echo '<a href="#" data-filter=".' . $category->slug . '" class="' . $activeClass . '">' . $category->name . '</a>';
-                        $firstIteration = false;
-                    }
-                }
-                ?>
+        <h2 class="section-title text-center mb-5">Portfolio <span>Videos</span></h2>
+        <div class="portfolio-videos-carousel text-center dot-style">
+            <div class="portfolio-video">
+                <iframe width="700" height="400" src="https://youtube.com/embed/Yzw7FvdYm-k?controls=1">
+                </iframe>
+                <h3>A-block</h3>
+                <p>Stay Ahead of the Storm with Our Stacked A-Block: Breaking News, Weather Alert, and More!</p>
             </div>
-            <div class="portfolio-container">
-                <?php
-                $args = array(
-                    'post_type' => 'project',
-                    'posts_per_page' => -1, // To retrieve all posts
-                );
 
-                $projects_query = new WP_Query($args);
+            <div class="portfolio-video">
+                <iframe width="700" height="400" src="https://youtube.com/embed/NTgYGg9z9d8?controls=1">
+                </iframe>
+                <h3>Showcasing</h3>
+                <p>Step into Our Newsroom: See How Our Anchors Present Stories from All Over the Studio and field.</p>
+            </div>
 
-                if ($projects_query->have_posts()) {
-                    $count = 0;
-                    while ($projects_query->have_posts()) {
-                        $count = $count + 1;
-                        $unique_id = 'modal_' . $count; // Yo
-                        $projects_query->the_post();
-                        $categories = get_the_category();
-                        $category_classes = array_map(function ($cat) {
-                            return $cat->slug;
-                        }, $categories);
-                        $category_class_string = implode(' ', $category_classes);
-                ?>
-                        <div class="col-md-6 col-lg-4 <?php echo $category_class_string; ?>">
-                            <?php
-                            echo '<div class="portfolio-item" data-toggle="modal" data-target="#' . $unique_id . '">';
-                            ?>
-                            <?php if (get_field('youtube')) : ?>
-                                <iframe style="width: 100%; height: auto; aspect-ratio: 16 / 9;" src="<?php echo get_field('youtube'); ?>" allowfullscreen></iframe>
-                            <?php else : ?>
-                                <img src="<?php echo get_field('project_image'); ?>" class="img-fluid" alt="<?php the_title(); ?>">
-                            <?php endif; ?>
-                            <div class="content-holder">
-                                <a class="img-popup" href="<?php the_field('skill_name'); ?>"></a>
-                                <div class="text-holder">
-                                    <h6 class="title"><?php echo the_field('project_name'); ?></h6>
-                                    <p class="subtitle"><?php echo the_field('project_exercpt'); ?></p>
-                                </div>
-                            </div>
-                        </div>
-                        <?php
-                        echo '<div class="modal fade" id="' . $unique_id . '" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">';
-                        ?>
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Project Details</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <?php if (get_field('youtube')) : ?>
-                                        <iframe style="width: 100%; height: auto; aspect-ratio: 16 / 9;" src="<?php echo get_field('youtube'); ?>" allowfullscreen></iframe>
-                                    <?php else : ?>
-                                        <img src="<?php echo get_field('project_image'); ?>" class="img-fluid" alt="<?php the_title(); ?>">
-                                    <?php endif; ?>
+            <div class="portfolio-video">
+                <iframe width="700" height="400" src="https://youtube.com/embed/4rUVPthTEss?controls=1">
+                </iframe>
+                <h3>Producer Reel</h3>
+                <p>Reel featuring breaking news, showcasing, weather coverage and vo/sots. </p>
+            </div>
 
-                                    <p><?php echo the_field('project_description'); ?></p>
-                                    <p> <a href="<?php echo '/' . the_field('project_slug'); ?>" target="_blank" style="color:red">Click to Learn More</a></p>
-
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                        </div>
+            <div class="portfolio-video">
+                <iframe width="700" height="400" src="https://youtube.com/embed/_DKgvdfcv6c?controls=1">
+                </iframe>
+                <h3>Tease Writing</h3>
+                <p>Examples of Headlines and Teases.</p>
             </div>
         </div>
-<?php
-                    }
-                    // wp_reset_postdata(); 
-                }
-?>
-
-
-
-    </div>
-    </div>
     </div>
 </section>
-<!-- End of portfolio section -->
-<!-- <section class="section bg-dark py-5">
-        <div class="container text-center wow slideInUp">
-            <h2 class="text-light mb-5 font-weight-normal">I Am Available For FreeLance</h2>
-            <a href="https://codemygig.com" target="_blank"><button class="btn bg-primary w-lg" > 
-               Hire me
-            </button></a>
-        </div>
-    </section> -->
 
 <section class="section my-4" id="portfolio-links">
     <div class="container wow slideInUp">

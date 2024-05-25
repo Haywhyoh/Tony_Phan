@@ -324,3 +324,20 @@ textarea {
 .footer a:hover {
   color: rgba(255, 255, 255, 0.699);
 }
+
+.portfolio-video iframe {
+  margin-bottom: 20px;
+}
+
+.portfolio-video h3 {
+  color: #006494;
+  font-size: 25px;
+}
+
+.portfolio-videos-carousel.slick-dotted.slick-slider {
+  margin-bottom: 0px;
+}
+
+.portfolio-videos-carousel.dot-style .slick-dots {
+  bottom: -30px;
+}
