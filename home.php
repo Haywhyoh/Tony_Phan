@@ -19,7 +19,7 @@
 </div>
 
 <!-- about section -->
-<section class="section pt-5 " id="about">
+<section class="section section-alt py-5" id="about">
     <!-- container -->
     <div class="container text-center">
         <!-- about wrapper -->
@@ -46,7 +46,7 @@
 </section> <!-- end of about section -->
 
 <!-- Service section -->
-<section class="section" id="service">
+<section class="section my-4" id="service">
     <div class="container text-center wow slideInUp">
         <!-- <p class="section-subtitle">What I Do ?</p> -->
         <h2 class="section-title mb-5">Core <span>Skills</span></h2>
@@ -81,7 +81,7 @@
 </section><!-- end of service section -->
 
 <!-- Portfolio Section -->
-<section class="section" id="portfolio">
+<section class="section section-alt py-5" id="portfolio">
     <div class="container wow slideInUp">
         <h2 class="section-title text-center mb-5">My <span>Portfolio</span></h2>
         <div class="portfolio">
@@ -191,7 +191,7 @@
         </div>
     </section> -->
 
-<section class="section" id="portfolio-links">
+<section class="section my-4" id="portfolio-links">
     <div class="container wow slideInUp">
         <h2 class="section-title text-center">Portfolio <span>Links</span></h2>
         <p class="section-subtitle text-center mb-5">Check out these exciting links for a glimpse of my work</p>
@@ -236,7 +236,7 @@
     </div>
 </section>
 
-<section class="section" id="web-articles">
+<section class="section section-alt py-5" id="web-articles">
     <div class="container wow slideInUp">
         <h2 class="section-title text-center mb-5">Web <span>Articles</span></h2>
         <div class="latest-blog-area pt-80 pb-120 gray-bg">
@@ -318,7 +318,7 @@
 </section>
 
 
-<section class="section" id="resume">
+<section class="section my-4" id="resume">
     <div class="container wow slideUpIn">
         <h2 class="section-title text-center mb-5">My <span>Resume</span></h2>
         <div class="row">
@@ -384,7 +384,7 @@
 </section>
 
 <!-- contact section -->
-<section class="section" id="contact" ">
+<section class="section section-alt py-5" id="contact" ">
     <div class="container text-center wow slideInUp">
         <h2 class="section-title mb-5">Contact <span>Me</span></h2>
         <!-- contact form -->

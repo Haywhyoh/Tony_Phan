@@ -267,6 +267,10 @@ textarea {
   font-weight: 400;
 }
 
+.section-alt {
+  background-color: white;
+}
+
 .section-title {
   color: #051923;
 }
@@ -279,8 +283,6 @@ textarea {
   color: #003554;
   font-weight: 700;
 }
-
-
 
 .about-text {
   font-weight: 200;
