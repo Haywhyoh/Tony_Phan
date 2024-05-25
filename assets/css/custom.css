@@ -287,3 +287,22 @@ textarea {
 .about-text {
   font-weight: 200;
 }
+
+.footer-container {
+  background-color: #051923;
+}
+
+.footer {
+  color: rgba(255, 255, 255, 0.699);
+  font-weight: 500;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #006494;
+  font-weight: 500;
+}
+
+.footer a:hover {
+  color: rgba(255, 255, 255, 0.699);
+}
