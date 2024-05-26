@@ -2,9 +2,9 @@
 <?php get_template_part('includes/navbar', 'content'); ?>
 
 <!-- Caption header -->
-<div class="caption-header text-center intro wow slideInUp" style="color: #E2F0F7; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/triangle.svg'); background-size: 32%; background-position: center 30%; background-repeat: no-repeat;">
+<div class="caption-header text-center intro wow slideInUp">
     <h5 class="fw-normal"><?php echo esc_html(get_theme_mod('sub_text')); ?></h5>
-    <h1 class="fs-large mb-0" style="font-size: 8rem">
+    <h1 class="fs-large mb-0 hero-big-text">
         <span class="" style="color: #E2F0F7">
             <?php echo esc_html(get_theme_mod('big_banner_text')); ?><span style="color: #EB4511">.</span>
         </span>

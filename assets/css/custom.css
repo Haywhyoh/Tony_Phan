@@ -392,3 +392,26 @@ textarea {
   font-weight: 200;
   color: #051923;
 }
+
+.caption-header {
+  color: #E2F0F7 !important;
+  /* background-image: url('../images/triangle.svg'); */
+  background-size: 32%;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+}
+
+.hero-big-text {
+  font-size: 8rem !important;
+}
+
+.typed-cursor {
+  color: #eb4511;
+  /* color: #006494; */
+}
+
+@media (max-width: 767px) {
+  .hero-big-text {
+    font-size: 5rem !important;
+  }
+}
